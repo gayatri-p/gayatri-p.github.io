@@ -1,0 +1,134 @@
+@font-face { 
+    font-family:"Something Wild";
+    src: url("somethingwild.ttf") /* TTF file for CSS3 browsers */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:not(a) {
+    pointer-events: none;    
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Bauhaus, Bahnschrift, sans-serif;
+}
+
+.page-border-decoration {
+    border: 20px solid #c0ffe9;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    margin-top: 65px;
+    margin: 0 auto 0;
+    max-width: 360px;
+}
+
+.image {
+    width: 80%;
+    z-index: -1;
+    margin-left: 20%;
+    margin-top: 25%; 
+}
+
+.image > img {
+    width: 100%;
+}
+
+.name {
+    z-index: 2;
+    width: 100%;
+    font-size: 7rem;
+    font-family: 'Something Wild', Verdana, sans-serif;
+    position: relative;
+    color: #00ffa6;
+}
+
+.name > span {
+    position: absolute;
+    top: -65px;
+    line-height: .7;
+    margin-left: 25px;
+}
+
+.name > span > span {
+    margin-left: 40px;
+}
+
+.about-me {
+    position: relative;
+    top: -80px;
+    margin: 0 50px;
+}
+
+.about-me span {
+    font-size: 16px;
+    line-height: 30px;
+    background: #c0ffe9;
+    display: inline;
+}
+
+.social-icons {
+    display: flex;
+    position: relative;
+    top: -70px;
+    margin: 0 50px;
+}
+
+.social-icons img {
+    width: 27px;
+    height: 27px;
+    margin-right: 13px;
+    pointer-events: all;
+}
+
+.social-icons img:hover {
+    text-shadow: 0 3px 2px rgba(0,0,0,.4)
+}
+
+.know-more a{
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: inset 0 3px 10px rgba(0,0,0,.1);
+    border-radius: 8px;
+    letter-spacing: 2px;
+    transition: all 150ms ease-in-out;
+}
+
+.know-more a:hover {
+    background: #eee;
+    box-shadow: inset 0 7px 15px rgba(0,0,0,.2)
+}
+
+@media (min-width: 800px) {
+    .page-border-decoration {
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .about-me {
+        top: -100px;
+        margin: 0 20px;
+    }
+
+    .social-icons {
+        top: -90px;
+        margin: 0 20px;
+    }
+}
