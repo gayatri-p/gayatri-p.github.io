@@ -16,7 +16,7 @@
 body {
     width: 100%;
     overflow-x: hidden;
-    font-family: Bauhaus, Bahnschrift, sans-serif;
+    font-family: Bahnschrift, sans-serif; 
 }
 
 .page-border-decoration {
@@ -43,8 +43,34 @@ body {
     margin-top: 25%; 
 }
 
-.image > img {
+#my-image {
     width: 100%;
+}
+
+.image-cont {
+    position: relative;
+}
+
+.image-cont::before,
+.image-cont::after {
+  content: '';
+  position: absolute;
+  top: 80%;
+  bottom: 12px;
+  z-index: -1;
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,.5);
+}
+
+.image-cont::before {
+  left: .25em;
+  right: 2em;
+  transform: rotate(-3deg);
+}
+
+.image-cont::after {
+  right: .25em;
+  left: 2em;
+  transform: rotate(3deg);
 }
 
 .name {
@@ -70,11 +96,11 @@ body {
 .about-me {
     position: relative;
     top: -80px;
+    font-size: 16px;
     margin: 0 50px;
 }
 
 .about-me span {
-    font-size: 16px;
     line-height: 30px;
     background: #c0ffe9;
     display: inline;
@@ -122,13 +148,30 @@ body {
         bottom: 20px;
     }
 
+    .name > span {
+        top: -140px;
+        margin-left: -164px;
+        font-size: 10rem;
+        line-height: .6;
+    }
+
+    .name > span > span {
+        margin-left: 100px;
+    }
+
+    .image {
+        margin-top: 38%;
+    }
+
     .about-me {
-        top: -100px;
-        margin: 0 20px;
+        top: -125px;
+        margin: 0px -25px;
+        font-size: 18px;
     }
 
     .social-icons {
-        top: -90px;
-        margin: 0 20px;
+        top: -91px;
+        margin: 0px -30px;
     }
+
 }
