@@ -162,7 +162,7 @@ body {
 }
 
 .floater img {
-    height: 100px; 
+    height: 100px;
 }
 
 #floater-1 {
@@ -176,6 +176,9 @@ body {
 }
 
 @media (min-width: 800px) {
+    .container {
+        max-height: 800px;
+    }
     .page-border-decoration {
         top: 20px;
         left: 20px;
@@ -200,14 +203,12 @@ body {
         margin: 0px -100px;
     }
     .floater img {
-        height: 200px; 
+        height: 200px;
     }
-    
     #floater-1 {
         top: 300px;
-        left: -20%;
+        left: -20vw;
     }
-    
     #floater-2 {
         top: 0px;
         right: -10%;
