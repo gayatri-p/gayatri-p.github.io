@@ -1,3 +1,24 @@
+.loader-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaded .loader-container {
+    display: none;
+}
+
+.text {
+    font-size: 2rem;
+    color: #fff;
+}
+
 /* GLOBALS */
 
 * {
@@ -8,7 +29,7 @@
 
 body {
     font-family: sans-serif;
-    background: url(../images/canvas.png)
+    background: url(../images/canvas.png), #191919;
 }
 
 a {
@@ -16,7 +37,6 @@ a {
 }
 
 /* ASTRONAUTS */
-
 
 /* THE CONTAINER */
 

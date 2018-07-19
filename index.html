@@ -18,7 +18,7 @@
     <title>Gayatri P</title>
 
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- GLOBAL SITE TAG (gtag.js) - GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121368788-1"></script>
@@ -30,7 +30,10 @@
     </script>
 </head>
 
-<body>
+<body id="body">
+    <div class="loader-container">
+       <div class="text">Thinking...</div>
+    </div>
     <div class="container">
         <div class="content">
             <div class="row row__name">
@@ -74,5 +77,11 @@
             <div class="row row__know-more"></div>
         </div>
     </div>
+    <script>
+        window.onload = function () {
+            document.getElementById('body').classList.add('loaded');
+        }
+    </script>
 </body>
+
 </html>
