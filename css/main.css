@@ -8,7 +8,8 @@
 
 body {
     font-family: sans-serif;
-    background: #191919, url(../images/canvas.png);
+    background: url(../images/canvas.png), #191919;
+
 }
 
 a {
