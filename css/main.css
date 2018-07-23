@@ -31,6 +31,7 @@
 body {
     font-family: sans-serif;
     background: url(../images/canvas.png), #191919;
+    cursor: url('../images/ship.png'), auto;
 }
 
 a {
@@ -97,12 +98,11 @@ a {
 .row__about {
     font-size: 23px;
     line-height: 1.3;
-    font-family: 'Poor Story'
+    font-family: 'Poor Story', sans-serif;
 }
 
 .row__about>span {
     background: #98dfd5;
-    cursor: pointer;
 }
 
 /* SOCIAL ICONS */
