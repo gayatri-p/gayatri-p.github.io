@@ -21,12 +21,6 @@
 
 /* GLOBALS */
 
-@font-face {
-    font-family: 'Gaegu';
-    src: url('gaegu.woff2') format('woff2'),
-         url('gaegu.woff') format('woff')
-}
-
 * {
     margin: 0;
     padding: 0;
