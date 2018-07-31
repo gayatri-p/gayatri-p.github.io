@@ -29,7 +29,7 @@
 
 body {
     font-family: sans-serif;
-    background: url(../images/canvas.png), #191919;
+    background: url(../images/canvas.svg), #191919;
     cursor: url('../images/ship.png'), auto;
 }
 
