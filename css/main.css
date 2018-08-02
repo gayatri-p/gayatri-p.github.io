@@ -72,7 +72,7 @@ a {
 /* MY NAME */
 
 .row__name {
-    width: 85%;
+    width: 90%;
     z-index: 3;
     object-fit: none;
 }
