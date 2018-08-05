@@ -30,6 +30,7 @@
 body {
     font-family: sans-serif;
     background: url(../images/canvas.svg), #191919;
+    background-size: cover;
     cursor: url('../images/ship.png'), auto;
 }
 
