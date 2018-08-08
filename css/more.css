@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Chewy|Cabin+Sketch');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/canvas.png)
+}
+
+#cloud {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Cabin Sketch', sans-serif;
+}
+
+.jqcloud-word {
+    padding: 10px;
+    cursor: default;
+}
+
+#brain-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #191919;
+    z-index: 1000;
+    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#brain-container svg {
+    width: 80%;
+}
+
+#explore-me-button {
+    font-family: 'Chewy', sans-serif;
+    position: absolute;
+    top: 40%;
+    bottom: 50%;
+    text-shadow: 15px 15px 30px #000;
+    font-size: 2.7rem;
+    opacity: 0;
+    pointer-events: none;
+    color: #00ccff;
+    animation: fade-in .5s ease-in forwards;
+    animation-delay: 4s;
+    cursor: pointer;
+}
+
+@keyframes fade-in {
+    0% {opacity:0}
+    100% {opacity:1;pointer-events: all;}
+}
+
+.jqcloud-word.floating {}
+
+@media (min-width: 800px) {
+    #brain-container svg {
+        width: 40%;
+    }
+    #explore-me-button {
+        font-size: 100px;
+    }
+}
