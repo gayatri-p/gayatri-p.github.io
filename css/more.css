@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Chewy|Cabin+Sketch');
+@font-face{font-family:'Cabin Sketch';font-style:normal;font-weight:400;src:local('Cabin Sketch Regular'),local(CabinSketch-Regular),url(https://fonts.gstatic.com/s/cabinsketch/v11/QGYpz_kZZAGCONcK2A4bGOj8mNhN.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
+/* GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +8,11 @@
 }
 
 body {
-    background: url(../images/canvas.png)
-}
-
-#cloud {
-    height: 100vh;
-    width: 100%;
     font-family: 'Cabin Sketch', sans-serif;
+    background: url(../images/canvas.svg);
 }
 
-.jqcloud-word {
-    padding: 10px;
-    cursor: default;
-}
+/* BRAIN-LOADER */
 
 #brain-container {
     position: fixed;
@@ -29,29 +22,30 @@ body {
     right: 0;
     background: #191919;
     z-index: 1000;
-    display: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #brain-container svg {
-    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: auto;
 }
 
 #explore-me-button {
-    font-family: 'Chewy', sans-serif;
     position: absolute;
-    top: 40%;
-    bottom: 50%;
-    text-shadow: 15px 15px 30px #000;
+    top: 75%;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: 15px 15px 15px #000;
     font-size: 2.7rem;
     opacity: 0;
     pointer-events: none;
-    color: #00ccff;
+    color: #fff;
     animation: fade-in .5s ease-in forwards;
     animation-delay: 4s;
-    cursor: pointer;
 }
 
 @keyframes fade-in {
@@ -59,13 +53,53 @@ body {
     100% {opacity:1;pointer-events: all;}
 }
 
-.jqcloud-word.floating {}
+/* CLOUD */
 
+#cloud {
+    font-family: 'Cabin Sketch', sans-serif;
+    height: 100vh;
+    width: 100%;
+}
+
+.jqcloud-word {
+    padding: 10px;
+    cursor: default;
+    animation: float 10s ease infinite;
+}
+
+/* ZERO GRAVITY ANIMATION */
+.jqcloud-word:nth-child(odd) {
+    animation-duration: 15s;
+    animation-name: float-reverse;
+}
+
+.jqcloud-word:nth-child(3n) {
+    animation-duration: 13s;
+}
+
+.jqcloud-word:nth-child(even) {
+    animation-timing-function: ease-out;
+}
+
+@keyframes float {
+    0%   {transform:rotate(-3deg) translatey(-15px)}
+    50%  {transform:rotate(3deg) translatey(15px)}
+    100% {transform:rotate(-3deg) translatey(-15px)}
+}
+
+@keyframes float-reverse {
+    0%   {transform:rotate(3deg) translateY(-20px)}
+    50%  {transform:rotate(-3deg) translateY(20px)}
+    100% {transform:rotate(3deg) translateY(-20px)}
+}
+
+/* DESKTOP VIEW */
 @media (min-width: 800px) {
     #brain-container svg {
+        top: 5%;
         width: 40%;
     }
     #explore-me-button {
-        font-size: 100px;
+        font-size: 80px;
     }
 }
