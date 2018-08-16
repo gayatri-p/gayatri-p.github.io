@@ -11,13 +11,35 @@
 
 body {
     background: url(../images/canvas.svg);
+    cursor: url('../images/ship.png'), auto;
+    overflow: hidden;
 }
 
 a {
     text-decoration: none;
     color: inherit;
 }
+/* ASTRONAUTS */
+.astronaut {
+    position: absolute;
+}
 
+.astronaut > img {
+    height: 50px;
+}
+
+#astro-1 {
+    top: 20px;
+    right: 65vw;
+    animation: float 30s ease-in-out infinite;
+}
+
+#astro-2 {
+    display: none;
+    bottom: 0px;
+    left: 80vw;
+    animation: float-reverse 25s ease-in-out infinite;
+}
 /* BRAIN-LOADER */
 #brain-container {
     position: fixed;
@@ -226,5 +248,11 @@ progress::-moz-progress-value {
     }
     #dissect-button {
         font-size: 80px;
+    }
+    .astronaut > img {
+        height: 200px;
+    }
+    #astro-2 {
+        display: block;
     }
 }

@@ -1,6 +1,6 @@
 // REMOVE BRAIN
 $('#dissect-button').click(_ => {
-    $('#brain-container').hide(500)
+    $('#brain-container').hide(400)
 })
 // JQCLOUD WORD CUSTOMIZATION
 var words = [
@@ -30,13 +30,15 @@ var words = [
     { text: "School 😋", weight: 6.2 },
 ];
 // RENDER CLOUD
-$('#cloud').jQCloud(words, {
-    autoResize: true,
-});
+const renderCloud = _ => {
+    $('#cloud').jQCloud(words, {
+        autoResize: true
+    });
+}
 // OPENING POPUPS
 const openPhysicsPopup = _ => { $('.popup-physics').removeClass('closed') }
 const openCodePopup = _ => { $('.popup-coding').removeClass('closed') }
 const openTravelPopup = _ => { $('.popup-travel').removeClass('closed') }
-
 // CLOSING POPUPS
 const closePopup = i => { $(i.parentNode).addClass('closed') }
+renderCloud()
