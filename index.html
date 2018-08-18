@@ -52,7 +52,7 @@
                     <a title="So, I'm both dead and alive at the same time.">Love Physics 🔭</a>.<br>
                     <a title="I made this website.">Amateur coder 💻</a>.<br>
                     <a title="wtf is G minor?">Terrible pianist 🎹</a>.<br>
-                    <a href="/more" title="Know more about me." id="typed-text">Get to know more.</a>
+                    <a href="/more" title="Know more about me." id="typing">Get to know more.</a>
                 </span>
             </div>
             <div class="row row__social">
@@ -88,6 +88,23 @@
     <script>
         window.onload = function () {
             document.getElementById('body').classList.add('loaded');
+            type()
+        }
+        const type = _ => {
+        const text = 'Get to know more.'
+        let i = 0
+        const typeWriter = (text, i, fnCallback) => {
+            if (i < (text.length)) {
+                document.getElementById("typing").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+                setTimeout(function () {
+                    typeWriter(text, i + 1, fnCallback)
+                }, 100);
+            }
+            else if (typeof fnCallback == 'function') {
+                setTimeout(fnCallback, 700);
+            }
+        }
+        typeWriter(text, 0, _ => {})
         }
     </script>
 </body>
