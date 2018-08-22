@@ -31,6 +31,10 @@ body {
     background: url(../images/canvas.svg), #191919;
     background-size: cover;
     cursor: url('../images/ship.png'), auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 a {

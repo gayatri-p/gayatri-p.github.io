@@ -13,6 +13,10 @@ body {
     background: url(../images/canvas.svg);
     cursor: url('../images/ship.png'), auto;
     overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 a {
@@ -22,7 +26,6 @@ a {
 /* ASTRONAUTS */
 .astronaut {
     position: absolute;
-    pointer-events: none;
 }
 
 .astronaut > img {
@@ -73,7 +76,7 @@ a {
     color: #fff;
     animation: fade-in .5s ease-in forwards;
     animation-delay: 4s;
-    font-family:'Ribeye Marrow', sans-serif
+    font-family:'Ribeye Marrow', sans-serif;
 }
 
 @keyframes fade-in {
@@ -92,12 +95,10 @@ a {
     padding: 10px;
     cursor: default;
     animation: float 10s ease infinite;
-    pointer-events: none;
 }
 
 .jqcloud-word.has-popup {
     cursor: pointer;
-    pointer-events: all;
 }
 
 /* ZERO GRAVITY ANIMATION */
