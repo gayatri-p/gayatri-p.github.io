@@ -146,7 +146,7 @@ a {
     }
 }
 
-
+/* FLOATING ANIMATION */
 .row {
     animation: float 10s ease infinite;
 }
