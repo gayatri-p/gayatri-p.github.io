@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Cabin Sketch';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Cabin Sketch Regular'), local(CabinSketch-Regular), url(https://fonts.gstatic.com/s/cabinsketch/v11/QGYpz_kZZAGCONcK2A4bGOj8mNhN.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        body {
+            background-color: #191919;
+            margin: 0;
+            padding: 0
+        }
+
+        .text {
+            opacity: 0;
+            z-index: 7;
+            /* text-align: left;
+            position: absolute;
+            margin: -50px 0 0 -150px;
+            width: 300px;
+            top: 50%;
+            left: 50%;
+            height: 100px; */
+            animation: on .6s ease-in-out .8s forwards;
+        }
+
+        .splash {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            top: 0;
+            overflow: hidden;
+        }
+
+        .splash_svg {
+            position: relative;
+            margin: auto;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            right: 0;
+        }
+
+        .splash_svg svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .splash_svg svg rect {
+            width: 100%;
+            height: 100%;
+            fill: #0cf;
+            stroke: 0;
+            clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+            animation: expand .7s ease-in forwards;
+        }
+
+        @keyframes on {
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes expand {
+            25% {
+                clip-path: polygon(0vw 0vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+                fill: #fff;
+            }
+            50% {
+                clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 60vh, 45vw 60vh);
+                fill: #0cf;
+            }
+            75% {
+                clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 60vh, 0vw 100vh);
+                fill: #fff;
+            }
+            100% {
+                clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
+                fill: #0cf;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .popup-guts.skills {
+            flex-direction: column;
+            text-align: center;
+            font-family: 'Cabin Sketch'
+        }
+
+        .popup-head {
+            color: #fff;
+            font-size: 2.4rem;
+        }
+
+        .popup-head-small {
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        #css {
+            height: 20px !important;
+        }
+
+        .skills img,
+        .skills svg {
+            width: 50px;
+        }
+
+        progress {
+            text-align: left;
+            position: relative;
+            top: 10px;
+            width: 200px;
+            margin: 2em auto;
+            padding: 3px;
+            border: 0 none;
+            background: #444;
+            border-radius: 14px;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+        }
+
+        progress::-moz-progress-bar {
+            border-radius: 7px;
+            background: #FFF;
+            box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3);
+
+        }
+
+        /* webkit */
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            progress {
+                height: 21px;
+            }
+        }
+
+        progress::-webkit-progress-bar {
+            background: #646464;
+            border-radius: 7px;
+        }
+
+        progress::-webkit-progress-value {
+            border-radius: 7px;
+            background: #fff;
+            /*blue*/
+            box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3);
+            border-radius: 7px;
+        }
+
+        progress::-moz-progress-value {
+            border-radius: 7px;
+            background: #fff;
+            /*blue*/
+            border-radius: 7px;
+            box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup-physics img {
+            filter: invert(82%)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="splash">
+        <div class="splash_svg">
+            <svg width="100%" height="100%">
+                <rect width="100%" height="100%">
+            </svg>
+        </div>
+    </div>
+    <div class="text">
+        <div class="popup-guts skills">
+            <h3 class="popup-head">My Coding Skills</h3>
+            <h5 class="popup-head-small"> <a href="https://repl.it/@gaya3p"> See my code </a> </h5>
+            <div class="skill">
+                <label>
+                    <svg viewBox="0 0 128 128">
+                        <path fill="#E44D26" d="M19.037 113.876l-10.005-112.215h109.936l-10.016 112.198-45.019 12.48z"></path>
+                        <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878h-44.937z"></path>
+                        <path fill="#EBEBEB" d="M64 52.455h-18.212l-1.258-14.094h19.47v-13.762h-34.511l.33 3.692 3.382 37.927h30.799zM64 88.198l-.061.017-15.327-4.14-.979-10.975h-13.817l1.928 21.609 28.193 7.826.063-.017z"></path>
+                        <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zM63.952 24.599v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
+                    </svg>
+                </label>
+                <progress min=0 max=100 value=80></progress>
+            </div>
+            <div class="skill">
+                <label>
+                    <svg viewBox="0 0 128 128">
+                        <path fill="#1572B6" d="M18.814 114.123l-10.054-112.771h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"></path>
+                        <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"></path>
+                        <path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163h-19.566v-13.831h34.681999999999995l-.332 3.711-3.4 38.114h-30.95v-13.831z"></path>
+                        <path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031h-13.882l1.937 21.717 28.331 7.863.063-.018v-14.39z"></path>
+                        <path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881h-13.876z"></path>
+                        <path fill="#EBEBEB" d="M64.048 23.435v13.831000000000001h-33.407999999999994l-.277-3.108-.63-7.012-.331-3.711h34.646zM64.001 51.431v13.831000000000001h-15.209l-.277-3.108-.631-7.012-.33-3.711h16.447z"></path>
+                    </svg>
+                </label>
+                <progress min=0 max=100 value=67></progress>
+            </div>
+            <div class="skill">
+                <label>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><linearGradient id="a" x1="70" x2="171"
+                            y1="1237" y2="1151" gradientTransform="matrix(.563 0 0 -.568 -29 708)" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#5A9FD4" />
+                            <stop offset="1" stop-color="#306998" />
+                        </linearGradient>
+                        <path fill="url(#a)" d="M63 2L52 3C41 5 39 9 39 16v9h25v3H30c-7 0-13 5-15 13-3 9-3 15 0 25 1 7 5 13 13 13h8V67c0-8 7-15 16-15h24c7 0 13-6 13-13V16c0-7-6-12-13-13L63 2zm-13 8c3 0 5 2 5 4 0 3-2 5-5 5s-5-2-5-5c0-2 2-4 5-4z"
+                        />
+                        <linearGradient id="b" x1="209" x2="174" y1="1099" y2="1150" gradientTransform="matrix(.563 0 0 -.568 -29 708)" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#FFD43B" />
+                            <stop offset="1" stop-color="#FFE873" />
+                        </linearGradient>
+                        <path fill="url(#b)" d="M92 28v11c0 9-8 16-16 16H52c-7 0-13 6-13 13v23c0 7 6 11 13 13s15 2 24 0c6-2 13-6 13-13v-9H64v-3h37c7 0 10-5 12-13 3-8 3-15 0-25-1-7-5-13-12-13h-9zM78 88c2 0 4 2 4 5 0 2-2 4-4 4-3 0-5-2-5-4 0-3 2-5 5-5z"
+                        />
+                        <radialGradient id="c" cx="1826" cy="444" r="27" gradientTransform="matrix(0 -.24 -1.055 0 533 558)" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#B8B8B8" stop-opacity="0" />
+                            <stop offset="1" stop-color="#7F7F7F" stop-opacity="0" />
+                        </radialGradient></svg>
+                </label>
+                <progress min=0 max=100 value=25></progress>
+            </div>
+            <div class="skill">
+                <label>
+                    <svg viewBox="0 0 128 128">
+                        <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                        <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+                    </svg>
+                </label>
+                <progress min=0 max=100 value=34></progress>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
