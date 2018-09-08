@@ -7,115 +7,80 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background: black
+            overflow: hidden;
+            background: #191919
         }
 
-        .cont {
-            margin: 25px auto;
-            width: 100px;
-            height: 100px;
-            position: relative;
-        }
-
-        .bar {
-            width: 100%;
-            height: 100%;
-            background: teal;
-
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 90%, 0 90%);
-            animation: anim 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
-        }
-
-        .inner {
-            width: 100%;
-            height: 97%;
-            background: black;
-
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 90%, 0 90%);
-            animation: anim 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
-        }
-
-        @keyframes anim {
-            0% {
-                clip-path: polygon(0 0, 100% 0, 100% 90%, 0 90%, 0 90%);
-            }
-
-            100% {
-                clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
-            }
-        }
-
-        .arrow {
-            z-index: 10;
-            width: 25px;
-            height: 15px;
+        .splash {
             position: absolute;
-            top: 72%;
-            left: -12%;
-
-            background: tomato;
-            transform-origin: bottom;
-
-            clip-path: polygon(100% 0, 100% 75%, 60% 75%, 50% 100%, 40% 75%, 0 75%, 0 0);
-            transform: rotate(0deg);
-            animation: arrow 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards,
-                flip 1s ease-out 1.2s forwards;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1100px;
+            max-width: 1100px;
+            height: 120vh;
+            /* background: #f0f5; */
         }
 
-        @keyframes flip {
-            0% {
-                transform: translateY(0) rotate(0deg);
-            }
-            15% {
-                transform: rotate(150deg);
-            }
-            30% {
-                transform: rotate(200deg);
-            }
-            45% {
-                transform: rotate(165deg);
-            }
-            60% {
-                transform: translateY(1px) rotate(170deg);
-            }
-            75% {
-                transform: rotate(175deg);
-            }
-            100% {
-                transform: translateY(2px) rotate(179deg);
-            }
+        .splash_svg {
+            height: 100%;
         }
 
-        @keyframes arrow {
-            0% {
-                top: 72%;
-                left: -12%;
-                transform: rotate(0deg);
-            }
+        svg {
+            /* border: 2px solid green; */
+            height: 100%;
+        }
 
-            50% {
-                transform: rotate(-10deg);
+        svg ellipse {
+            cx: 50%;
+            cy: 50%;
+            rx: 0%;
+            ry: 0%;
+            fill: #0cf;
+            /* stroke: purple; */
+            /* stroke-width: 2 */
+            animation: open .5s cubic-bezier(.75, -0.5, 0, 1.75) forwards;
+        }
+
+        @keyframes open {
+            0% {
+                rx: 0%;
+                ry: 0%
             }
 
             100% {
-                top: 82%;
-                left: 37.5%;
-                transform: rotate(-1deg);
+                rx: 50%;
+                ry: 50%
+            }
+        }
+
+        @media (max-width:1000px) {
+            .splash {
+                width: 150vw%;
+                height: 200vh;
+                top: 0%;
+                left: 0%;
+                transform: translate(0);
             }
         }
     </style>
 </head>
 
 <body>
-
-    <div class="cont">
-        <div class="bar">
-            <div class="inner"></div>
+    <div class="splash">
+        <div class="splash_svg">
+            <svg width="100%" height="100%">
+                <ellipse />
+            </svg>
         </div>
-        <div class="arrow">49%</div>
     </div>
-
 </body>
 
 </html>

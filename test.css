@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    --primary: #0cf;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #191919
+}
+
+#skills {
+    background: #0cf;
+    /* border-radius: 50%; */
+    width: 900px;
+    max-width: 900px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* INDIVIDUAL SKILL */
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* border: 1px solid purple; */
+}
+
+.skill-info {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 5px 10px
+}
+
+.skill-bar {
+    position: relative;
+    width: 550px;
+}
+
+.skill svg {
+    padding: 20px 0 20px 20px;
+    width: 100%;
+}
+
+.skill-path {
+    fill: none;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    d: path('M 0 0 L 0 0 L 600 0 ');
+    animation: gravity 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards, bounce 1.5s ease-out 1.2s forwards;
+}
+
+.arrow {
+    z-index: 10;
+    padding: 10px 20px 20px 20px;
+    position: absolute;
+    top: -29%;
+    left: -3%;
+    background: #90a0dd;
+    transform-origin: bottom;
+    clip-path: polygon(100% 0, 100% 75%, 60% 75%, 50% 100%, 40% 75%, 0 75%, 0 0);
+    transform: rotate(0deg);
+}
+
+.arrow span{
+    display: block;
+    transform: rotate(180deg)
+}
+
+/* ************************************ */
+/* HTML */
+.skill-html .skill-path {
+    stroke: #03256C;
+    animation: gravity1 1.4s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards, bounce1 1.5s ease-out 1.4s forwards;
+}
+
+.skill-html .arrow {
+    animation: arrow1 1.4s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards, flip 1.5s ease-out 1.4s forwards;
+}
+
+@keyframes gravity1 {
+    0% {d: path('M 0 0 L 0 0 L 500 0 ')}
+    100% {d: path('M 0 0 L 400 50 L 500 0')}
+}
+@keyframes bounce1 {
+    0% {d: path('M 0 0 L 400 50 L 500 0 ')}
+    15% {d: path('M 0 0 L 400 40 L 500 0 ')}
+    30% {d: path('M 0 0 L 400 60 L 500 0 ')}
+    45% {d: path('M 0 0 L 400 43 L 500 0 ')}
+    60% {d: path('M 0 0 L 400 53 L 500 0 ')}
+    75% {d: path('M 0 0 L 400 51 L 500 0 ')}
+    100% {d: path('M 0 0 L 400 50 L 500 0 ')}
+}
+
+@keyframes arrow1 {
+    0% {
+        top: -29%;
+        left: -3%;
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        top: 18%;
+        left: 70%;
+        transform: rotate(-1deg);
+    }
+}
+
+/* ************************************ */
+/* CSS */
+.skill-css .skill-path {
+    stroke: #2541B2;
+    animation: gravity2 1.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards, bounce2 1.5s ease-out 1.3s forwards;
+}
+
+.skill-css .arrow {
+    animation: arrow2 1.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards, flip 1.5s ease-out 1.3s forwards;
+}
+
+@keyframes gravity2 {
+    0% {d: path('M 0 0 L 0 0 L 500 0 ')}
+    100% {d: path('M 0 0 L 335 50 L 500 0')}
+}
+@keyframes bounce2 {
+    0% {d: path('M 0 0 L 335 50 L 500 0 ')}
+    15% {d: path('M 0 0 L 335 40 L 500 0 ')}
+    30% {d: path('M 0 0 L 335 60 L 500 0 ')}
+    45% {d: path('M 0 0 L 335 43 L 500 0 ')}
+    60% {d: path('M 0 0 L 335 53 L 500 0 ')}
+    75% {d: path('M 0 0 L 335 51 L 500 0 ')}
+    100% {d: path('M 0 0 L 335 50 L 500 0 ')}
+}
+
+@keyframes arrow2 {
+    0% {
+        top: -29%;
+        left: -3%;
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        top: 18%;
+        left: 58%;
+        transform: rotate(-1deg);
+    }
+}
+
+/* ************************************ */
+/* PYTHON */
+.skill-py .skill-path {
+    stroke: #1768AC;
+    animation: gravity3 1.1s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards, bounce3 1.5s ease-out 1.1s forwards;
+}
+
+.skill-py .arrow {
+    animation: arrow3 1.1s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards, flip 1.5s ease-out 1.1s forwards;
+}
+
+@keyframes gravity3 {
+    0% {d: path('M 0 0 L 0 0 L 500 0 ')}
+    100% {d: path('M 0 0 L 125 50 L 500 0')}
+}
+@keyframes bounce3 {
+    0% {d: path('M 0 0 L 125 50 L 500 0 ')}
+    15% {d: path('M 0 0 L 125 40 L 500 0 ')}
+    30% {d: path('M 0 0 L 125 60 L 500 0 ')}
+    45% {d: path('M 0 0 L 125 43 L 500 0 ')}
+    60% {d: path('M 0 0 L 125 53 L 500 0 ')}
+    75% {d: path('M 0 0 L 125 51 L 500 0 ')}
+    100% {d: path('M 0 0 L 125 50 L 500 0 ')}
+}
+
+@keyframes arrow3 {
+    0% {
+        top: -29%;
+        left: -3%;
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        top: 18%;
+        left: 20%;
+        transform: rotate(-1deg);
+    }
+}
+
+/* ************************************ */
+/* JAVASCRIPT */
+.skill-js .skill-path {
+    stroke: #FFFFFF;
+    animation: gravity4 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards, bounce4 1.5s ease-out 1.2s forwards;
+}
+
+.skill-js .arrow {
+    animation: arrow4 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards, flip 1.5s ease-out 1.2s forwards;
+}
+
+@keyframes gravity4 {
+    0% {d: path('M 0 0 L 0 0 L 500 0 ')}
+    100% {d: path('M 0 0 L 170 50 L 500 0')}
+}
+
+@keyframes bounce4 {
+    0% {d: path('M 0 0 L 170 50 L 500 0 ')}
+    15% {d: path('M 0 0 L 170 40 L 500 0 ')}
+    30% {d: path('M 0 0 L 170 60 L 500 0 ')}
+    45% {d: path('M 0 0 L 170 43 L 500 0 ')}
+    60% {d: path('M 0 0 L 170 53 L 500 0 ')}
+    75% {d: path('M 0 0 L 170 51 L 500 0 ')}
+    100% {d: path('M 0 0 L 170 50 L 500 0 ')}
+}
+
+@keyframes arrow4 {
+    0% {
+        top: -29%;
+        left: -3%;
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        top: 18%;
+        left: 28%;
+        transform: rotate(-1deg);
+    }
+}
+
+/* ************************************ */
+
+@keyframes flip {
+    0% {transform: translateY(0px) rotate(0deg);}
+    15% {transform: translateY(-10px) rotate(150deg);}
+    30% {transform: translateY(10px) rotate(200deg);}
+    45% {transform: translateY(-7px) rotate(165deg);}
+    60% {transform: translateY(3px) rotate(170deg);}
+    75% {transform: translateY(1px) rotate(175deg);}
+    100% {transform: translateY(0px) rotate(179deg);}
+}
