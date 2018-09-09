@@ -4,27 +4,21 @@ $('#dissect-button').click(_ => {
 })
 // JQCLOUD WORD CUSTOMIZATION
 var words = [
-    {
-        text: "Physics ⚛", weight: 10,
-        handlers: {
-            click: _ => { openPhysicsPopup() }
-        },
-        html: { class: 'has-popup' }
-    },
+    {text: "Physics ⚛", weight: 10},
     {
         text: "Coding 💻", weight: 9,
         handlers: {
-            click: _ => { openCodePopup() }
+            click: _ => { openPopup() }
         },
-        html: { class: 'has-popup' }
+        html: { class: 'linked' }
     },
     { text: "Music 🎹", weight: 8.5 },
-    { text: "Kerala 🌴", weight: 8.5, link: 'https://en.wikipedia.org/wiki/Kerala', html: { class: 'has-popup' } },
+    { text: "Kerala 🌴", weight: 8.5, link: 'https://en.wikipedia.org/wiki/Kerala', html: { class: 'linked' } },
     { text: "Astronomy 🔭", weight: 8 },
     { text: "Web dev 🕸", weight: 7.9 },
     { text: "Star Watching 🌌", weight: 7.1 },
     { text: "Cycling 🚴", weight: 7.1 },
-    { text: "Bazinga 💥", weight: 6.4, link: 'https://en.wikipedia.org/wiki/The_Big_Bang_Theory',html: { class: 'has-popup' } },
+    { text: "Bazinga 💥", weight: 6.4, link: 'https://en.wikipedia.org/wiki/The_Big_Bang_Theory',html: { class: 'linked' } },
     { text: "Sleep 💤", weight: 6.4 },
     { text: "Mollywood 😘", weight: 6.3 },
     { text: "School 😋", weight: 6.2 },
@@ -35,10 +29,10 @@ const renderCloud = _ => {
         autoResize: true
     });
 }
-// OPENING POPUPS
-const openPhysicsPopup = _ => { $('.popup-physics').removeClass('closed') }
-const openCodePopup = _ => { $('.popup-coding').removeClass('closed') }
-const openTravelPopup = _ => { $('.popup-travel').removeClass('closed') }
-// CLOSING POPUPS
-const closePopup = i => { $(i.parentNode).addClass('closed') }
-renderCloud()
+// OPENING N CLOSINGPOPUP
+const openPopup = _ => {
+    $('.popup').addClass('show')
+    $('.skill').addClass('show')
+}
+const closePopup = _ => { $('.popup').removeClass('show')}
+renderCloud() // LET IT RAIN ☁
