@@ -21,7 +21,6 @@
 
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/font.css">
 
     <!-- GLOBAL SITE TAG (gtag.js) - GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121368788-1"></script>
@@ -39,12 +38,11 @@
     </div>
     <div class="container">
         <div class="content">
-            <h1 style="display:none">Hi, I'm Gayatri</h1>
             <div class="row row__name">
                 <img src="images/gamma.svg" alt="hi, i'm gayatri" srcset="">
             </div>
             <div class="row row__image" title="Me at Wayanad.">
-                <img src="images/me.jpeg" alt="My image." srcset="">
+                <img src="images/me.min.jpg" alt="My image." srcset="">
             </div>
             <div class="row row__about">
                 <span>
@@ -52,7 +50,7 @@
                     <a title="So, I'm both dead and alive at the same time.">Love Physics 🔭</a>.<br>
                     <a title="I made this website.">Amateur coder 💻</a>.<br>
                     <a title="wtf is G minor?">Terrible pianist 🎹</a>.<br>
-                    <a href="/more" title="Know more about me.">Get to know more.</a>
+                    <a href="/more" title="Know more about me." id="typing">Get to know more.</a>
                 </span>
             </div>
             <div class="row row__social">
@@ -82,12 +80,28 @@
                     </svg>
                 </a>
             </div>
-            <div class="row row__know-more"></div>
         </div>
     </div>
     <script>
         window.onload = function () {
             document.getElementById('body').classList.add('loaded');
+            type()
+        }
+        const type = _ => {
+        const text = 'Get to know more.'
+        let i = 0
+        const typeWriter = (text, i, fnCallback) => {
+            if (i < (text.length)) {
+                document.getElementById("typing").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+                setTimeout(function () {
+                    typeWriter(text, i + 1, fnCallback)
+                }, 100);
+            }
+            else if (typeof fnCallback == 'function') {
+                setTimeout(fnCallback, 700);
+            }
+        }
+        typeWriter(text, 0, _ => {})
         }
     </script>
 </body>
