@@ -18,10 +18,10 @@ var words = [
     { text: "Web dev 🕸", weight: 7.9 },
     { text: "Star Watching 🌌", weight: 7.1 },
     { text: "Cycling 🚴", weight: 7.1 },
+    { text: "Reading 🤓", weight: 7 },
     { text: "Bazinga 💥", weight: 6.4, link: 'https://en.wikipedia.org/wiki/The_Big_Bang_Theory',html: { class: 'linked' } },
     { text: "Sleep 💤", weight: 6.4 },
     { text: "Mollywood 😘", weight: 6.3 },
-    { text: "School 😋", weight: 6.2 },
 ];
 // RENDER CLOUD
 const renderCloud = _ => {
@@ -34,5 +34,8 @@ const openPopup = _ => {
     $('.popup').addClass('show')
     $('.skill').addClass('show')
 }
-const closePopup = _ => { $('.popup').removeClass('show')}
+const closePopup = _ => { 
+    $('.popup').removeClass('show')
+    $('.skill').removeClass('show')
+}
 renderCloud() // LET IT RAIN ☁

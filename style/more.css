@@ -11,6 +11,7 @@
 body {
     background: url(../images/canvas.svg);
     cursor: url('../images/ship.png'), auto;
+    width: 100vw;
     overflow: hidden;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -24,13 +25,21 @@ a {
     color: inherit;
 }
 /* ASTRONAUTS */
+.astronauts {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
 .astronaut {
     position: absolute;
-    z-index: -1;
 }
 
 .astronaut > img {
-    height: 120px;
+    height: 150px;
 }
 
 #astro-1 {
@@ -425,24 +434,28 @@ a {
         top: 5%;
         right: 5%;
     }
+    .popup-head {
+        transform: translateY(10%);
+    }
 }
 
 @media (max-width: 440px) {
     #skills {
         width: 100%;
+        transform: scale(.8)
     }
     .skill {
         flex-direction: column;
         align-items: center;
+    }
+    .popup-head {
+        transform: translateY(110%);
     }
 }
 
 @media (max-width: 360px) {
     #skills {
         width: 100%;
-        transform: scale(.7)
-    }
-    .skill svg {
         transform: scale(.7)
     }
 }
