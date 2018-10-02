@@ -74,12 +74,6 @@ a {
     position: relative;
     top: -50px;
 }
-.row__image img {
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-}
 .row__about, .row__social {
     position: relative;
     top: -60px;
@@ -94,10 +88,6 @@ a {
 }
 .row__about>span>a {
     background: #98dfd5;   
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
 }
 /* SOCIAL ICONS */
 .row__social {
