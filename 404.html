@@ -32,10 +32,11 @@
 
         body {
             font-family: sans-serif;
-            width: 100%;
+            width: 100vw;
             height: 100vh;
             overflow: hidden;
-            /* background: url(images/canvas.svg), #191919; */
+            background: url(images/canvas.svg), #191919;
+            color: #fff;
             font-family: 'Amatic SC';
             cursor: url(images/ship.png), auto;
             background-size: cover;
@@ -98,7 +99,7 @@
             height: 70%;
         }
 
-        @media (max-width: 350px) {
+        @media (max-width: 375px) {
             .emoji {
                 font-size: 5rem;
             }
@@ -114,10 +115,10 @@
 <body>
     <div class="text">
         <div class="emoji">:(</div>
-        <div class="message">Uh-oh <span>404</span><br>No one is not home</div>
+        <div class="message">Uh-oh <span>404</span><br>no one is answering</div>
     </div>
     <img src="images/knock.gif" alt="page not found">
-    <a href="/index">Try some other door</a>
+    <a href="/">Try some other door</a>
 </body>
 
 </html>
