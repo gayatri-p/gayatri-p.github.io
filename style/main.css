@@ -156,3 +156,42 @@ a {
     50%  {transform:rotate(-1deg) translateY(6px)}
     100% {transform:rotate(1deg) translateY(-6px)}
 }
+/* ASTRONAUTS */
+.astronauts {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.astronaut {
+    position: absolute;
+}
+
+.astronaut > img {
+    height: 150px;
+}
+
+#astro-1 {
+    top: 20px;
+    right: 65vw;
+    animation: float 30s ease-in-out infinite;
+}
+
+#astro-2 {
+    top: 50%;
+    left: 5vw;
+    animation: float-reverse 25s ease-in-out infinite;
+}
+
+@media (min-width: 800px) {
+
+    .astronaut > img {
+        height: 200px;
+    }
+    #astro-2 {
+        left: 80vw;
+    }
+}
