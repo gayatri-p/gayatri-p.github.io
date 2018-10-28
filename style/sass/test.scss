@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Ribeye');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$tr-before: opacity .3s 0s, transform .3s 0s;
+$tr-later: opacity .6s .4s, transform .6s .4s;
+$auto: url(../images/spaceship.png), auto;
+$pointer: url(../images/pointer.png), pointer;
+
+.jqcloud{font-size:10px;line-height:normal;overflow:hidden;position:relative}.jqcloud-word.w1{color:#aab5f0;font-size:100%}.jqcloud-word.w2{color:#9ce;font-size:150%}.jqcloud-word.w3{color:#a0ddff;font-size:200%}.jqcloud-word.w4{color:#90c5f0;font-size:250%}.jqcloud-word.w5{color:#90a0dd;font-size:300%}.jqcloud-word.w6{color:#90c5f0;font-size:350%}.jqcloud-word.w7{color:#39d;font-size:400%}.jqcloud-word.w8{color:#0cf;font-size:450%}.jqcloud-word.w9{color:#0cf;font-size:500%}.jqcloud-word.w10{color:#0cf;font-size:550%}.jqcloud-word a:hover{color:#0cf}
+
+body {
+    background: url(../images/canvas.svg), #191919;
+    cursor: $auto;
+    width: 100vw;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    font-family: 'Cabin Sketch', sans-serif;
+}
+
+a, button{
+    color:inherit;
+    font-size:inherit;
+    text-decoration:none;
+    cursor: $pointer;
+}
+
+// BRAIN
+#brain-container {
+    // display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #191919;
+    z-index: 1000;
+    transition: .3s ease-out
+}
+
+#brain-container svg {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: auto;
+}
+// DISSECT MY BRAIN 
+#dissect-button {
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: 2px 8px 4px #0005;
+    font-size: 2.7rem;
+    opacity: 0;
+    pointer-events: none;
+    color: #fff;
+    animation: fade-in .5s ease-in forwards;
+    animation-delay: 4s;
+    font-family:'Ribeye', sans-serif;
+}
+
+@keyframes fade-in {
+    0% {opacity:0}
+    100% {opacity:1;pointer-events: all;}
+}
+//  ASTRONAUTS
+.astronauts {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.astronaut {
+    position: absolute;
+}
+
+.astronaut > img {
+    height: 150px;
+}
+
+#astro-1 {
+    top: 20px;
+    right: 65vw;
+    animation: float 30s ease-in-out infinite;
+}
+
+#astro-2 {
+    top: 50%;
+    left: 5vw;
+    animation: float-reverse 25s ease-in-out infinite;
+}
+// CLOUD
+#cloud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+
+.jqcloud-word {
+    padding: 10px;
+    cursor: $auto;
+    animation: float 10s ease infinite;
+}
+
+.jqcloud-word.linked {
+    cursor: $pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 25%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90%;
+        height: 15%;
+        background: #dd1c1a99;
+        z-index: -1;
+    }
+}
+
+// ZERO GRAVITY ANIMATION
+.jqcloud-word:nth-child(odd) {
+    animation-duration: 15s;
+    animation-name: float-reverse;
+}
+
+.jqcloud-word:nth-child(3n) {
+    animation-duration: 13s;
+}
+
+.jqcloud-word:nth-child(even) {
+    animation-timing-function: ease-out;
+}
+
+@keyframes float {
+    0%   {transform:rotate(-3deg) translatey(-15px)}
+    50%  {transform:rotate(3deg) translatey(15px)}
+    100% {transform:rotate(-3deg) translatey(-15px)}
+}
+
+@keyframes float-reverse {
+    0%   {transform:rotate(3deg) translateY(-20px)}
+    50%  {transform:rotate(-3deg) translateY(20px)}
+    100% {transform:rotate(3deg) translateY(-20px)}
+}
+// POPUP
+svg.background-svg {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+polygon {
+    fill: #4d2323;
+    position: relative;
+}
+
+.dummy {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.popup {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    opacity: 0;
+    transform: scale(0);
+    transition: $tr-before;
+    color: #fff;
+
+    h1 {
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 32px;
+    }
+}
+
+#close {
+    all: unset;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right:50px;
+    top: 50px;
+    cursor: $pointer;
+    transform: scale(0);
+    transition: $tr-before;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 10px;
+        width: 140%;
+        background: #fff;
+        transition: .3s ease-in;
+    }
+
+    &::before {
+        transform: translate(-10px, -50%) rotate(45deg);
+    }
+
+    &::after {
+        transform: translate(-10px, -50%) rotate(-45deg)
+    }
+
+    &:hover {
+        &::before,
+        &::after {    
+            transform: translate(-7px, -50%) rotate(0deg);
+        }
+    }
+}
+
+.popup.active {
+    pointer-events: all;
+
+    .popup-content{
+        opacity: 1;
+        transform: scale(1);
+        transition: $tr-later
+    }
+
+    #close {
+        transform: scale(1);
+        transition: $tr-later
+    }
+
+}
+
+.skill-bar {
+    position: relative;
+}
+
+.skill-path {
+    fill: none;
+    stroke-width: 10px;
+    stroke-linecap: round;
+}
+
+.skill-html .skill-path { stroke: #E44D26 }
+.skill-css .skill-path { stroke: #1572B6 }
+.skill-py .skill-path { stroke: #306998 }
+.skill-js .skill-path { stroke: #F0DB4F }
+
+/* DESKTOP VIEW */
+@media (min-width: 800px) {
+    #brain-container svg {
+        top: 5%;
+        width: 40%;
+    }
+    #dissect-button {
+        font-size: 80px;
+    }
+    .astronaut > img {
+        height: 200px;
+    }
+    #astro-2 {
+        left: 80vw;
+    }
+}
