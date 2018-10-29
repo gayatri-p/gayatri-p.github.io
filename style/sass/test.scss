@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Ribeye');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Ribeye|Suez+One');
 
 * {
     margin: 0;
@@ -10,6 +10,8 @@ $tr-before: opacity .3s 0s, transform .3s 0s;
 $tr-later: opacity .6s .4s, transform .6s .4s;
 $auto: url(../images/spaceship.png), auto;
 $pointer: url(../images/pointer.png), pointer;
+
+$fSecular: 'Suez One', sans-serif;
 
 .jqcloud{font-size:10px;line-height:normal;overflow:hidden;position:relative}.jqcloud-word.w1{color:#aab5f0;font-size:100%}.jqcloud-word.w2{color:#9ce;font-size:150%}.jqcloud-word.w3{color:#a0ddff;font-size:200%}.jqcloud-word.w4{color:#90c5f0;font-size:250%}.jqcloud-word.w5{color:#90a0dd;font-size:300%}.jqcloud-word.w6{color:#90c5f0;font-size:350%}.jqcloud-word.w7{color:#39d;font-size:400%}.jqcloud-word.w8{color:#0cf;font-size:450%}.jqcloud-word.w9{color:#0cf;font-size:500%}.jqcloud-word.w10{color:#0cf;font-size:550%}.jqcloud-word a:hover{color:#0cf}
 
@@ -69,6 +71,7 @@ a, button{
     animation: fade-in .5s ease-in forwards;
     animation-delay: 4s;
     font-family:'Ribeye', sans-serif;
+    cursor: $pointer;
 }
 
 @keyframes fade-in {
@@ -130,8 +133,12 @@ a, button{
         transform: translate(-50%);
         width: 90%;
         height: 15%;
-        background: #dd1c1a99;
+        background: #9a4943;
         z-index: -1;
+        transition: .3s ease-in;
+    }
+    &:hover::before {
+        height: 55%;
     }
 }
 
@@ -171,7 +178,7 @@ svg.background-svg {
 }
 
 polygon {
-    fill: #4d2323;
+    fill: #222929;
     position: relative;
 }
 
@@ -202,13 +209,51 @@ polygon {
     transform: scale(0);
     transition: $tr-before;
     color: #fff;
+    font-family: $fSecular;
 
     h1 {
         margin-bottom: 50px;
         text-align: center;
         font-size: 32px;
+        font-family: $fSecular;
+        // letter-spacing: 1px;
+        font-weight: normal;
     }
 }
+
+.skill {
+    display: flex;
+
+    &-name {
+        flex-grow: 1;
+        text-align: right;
+        margin-right: 20px
+    }
+    &-bar {
+        position: relative;
+    }
+    &-path {
+        fill: none;
+        stroke-width: 10px;
+        stroke-linecap: round;
+    }
+}
+
+.arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #191919;
+    padding: 10px 20px 20px 20px;
+    transform-origin: bottom;
+    clip-path: polygon(100% 0, 100% 75%, 60% 75%, 50% 100%, 40% 75%, 0 75%, 0 0);
+    transform: translate(-50%, -110%) rotate(0deg);
+}
+    
+.skill-html .skill-path { stroke: #E44D26 }
+.skill-css .skill-path { stroke: #1572B6 }
+.skill-py .skill-path { stroke: #306998 }
+.skill-js .skill-path { stroke: #F0DB4F }
 
 #close {
     all: unset;
@@ -220,6 +265,7 @@ polygon {
     cursor: $pointer;
     transform: scale(0);
     transition: $tr-before;
+    z-index: 50;
 
     &::before,
     &::after {
@@ -264,21 +310,6 @@ polygon {
     }
 
 }
-
-.skill-bar {
-    position: relative;
-}
-
-.skill-path {
-    fill: none;
-    stroke-width: 10px;
-    stroke-linecap: round;
-}
-
-.skill-html .skill-path { stroke: #E44D26 }
-.skill-css .skill-path { stroke: #1572B6 }
-.skill-py .skill-path { stroke: #306998 }
-.skill-js .skill-path { stroke: #F0DB4F }
 
 /* DESKTOP VIEW */
 @media (min-width: 800px) {

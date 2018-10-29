@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Ribeye");
+@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Ribeye|Suez+One");
 * {
   margin: 0;
   padding: 0;
@@ -125,6 +125,7 @@ a, button {
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
   font-family: 'Ribeye', sans-serif;
+  cursor: url(../images/pointer.png), pointer;
 }
 
 @-webkit-keyframes fade-in {
@@ -207,8 +208,14 @@ a, button {
           transform: translate(-50%);
   width: 90%;
   height: 15%;
-  background: #dd1c1a99;
+  background: #9a4943;
   z-index: -1;
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
+}
+
+.jqcloud-word.linked:hover::before {
+  height: 55%;
 }
 
 .jqcloud-word:nth-child(odd) {
@@ -304,7 +311,7 @@ svg.background-svg {
 }
 
 polygon {
-  fill: #4d2323;
+  fill: #222929;
   position: relative;
 }
 
@@ -347,12 +354,69 @@ polygon {
   transition: opacity 0.3s 0s, transform 0.3s 0s;
   transition: opacity 0.3s 0s, transform 0.3s 0s, -webkit-transform 0.3s 0s;
   color: #fff;
+  font-family: "Suez One", sans-serif;
 }
 
 .popup-content h1 {
   margin-bottom: 50px;
   text-align: center;
   font-size: 32px;
+  font-family: "Suez One", sans-serif;
+  font-weight: normal;
+}
+
+.skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skill-name {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.skill-bar {
+  position: relative;
+}
+
+.skill-path {
+  fill: none;
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+
+.arrow {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #191919;
+  padding: 10px 20px 20px 20px;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-clip-path: polygon(100% 0, 100% 75%, 60% 75%, 50% 100%, 40% 75%, 0 75%, 0 0);
+          clip-path: polygon(100% 0, 100% 75%, 60% 75%, 50% 100%, 40% 75%, 0 75%, 0 0);
+  -webkit-transform: translate(-50%, -110%) rotate(0deg);
+          transform: translate(-50%, -110%) rotate(0deg);
+}
+
+.skill-html .skill-path {
+  stroke: #E44D26;
+}
+
+.skill-css .skill-path {
+  stroke: #1572B6;
+}
+
+.skill-py .skill-path {
+  stroke: #306998;
+}
+
+.skill-js .skill-path {
+  stroke: #F0DB4F;
 }
 
 #close {
@@ -369,6 +433,7 @@ polygon {
   transition: opacity 0.3s 0s, -webkit-transform 0.3s 0s;
   transition: opacity 0.3s 0s, transform 0.3s 0s;
   transition: opacity 0.3s 0s, transform 0.3s 0s, -webkit-transform 0.3s 0s;
+  z-index: 50;
 }
 
 #close::before, #close::after {
@@ -419,32 +484,6 @@ polygon {
   transition: opacity 0.6s 0.4s, -webkit-transform 0.6s 0.4s;
   transition: opacity 0.6s 0.4s, transform 0.6s 0.4s;
   transition: opacity 0.6s 0.4s, transform 0.6s 0.4s, -webkit-transform 0.6s 0.4s;
-}
-
-.skill-bar {
-  position: relative;
-}
-
-.skill-path {
-  fill: none;
-  stroke-width: 10px;
-  stroke-linecap: round;
-}
-
-.skill-html .skill-path {
-  stroke: #E44D26;
-}
-
-.skill-css .skill-path {
-  stroke: #1572B6;
-}
-
-.skill-py .skill-path {
-  stroke: #306998;
-}
-
-.skill-js .skill-path {
-  stroke: #F0DB4F;
 }
 
 /* DESKTOP VIEW */

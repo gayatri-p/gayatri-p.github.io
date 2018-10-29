@@ -436,11 +436,11 @@ a {
 
 .arrow {
   z-index: 10;
-  padding: 10px 20px 20px 20px;
   position: absolute;
   top: -29%;
   left: -3%;
   background: #191919;
+  padding: 10px 20px 20px 20px;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
   -webkit-clip-path: polygon(100% 0, 100% 75%, 60% 75%, 50% 100%, 40% 75%, 0 75%, 0 0);

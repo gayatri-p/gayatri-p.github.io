@@ -10,7 +10,10 @@
     align-items: center;
 }
 .loaded .loader-container {
-    display: none;
+    transform: scale(8);
+    opacity: 0;
+    transition: transform .3s ease-in, opacity .3s ease;
+    pointer-events: none;
 }
 .text {
     font-size: 2rem;
@@ -59,8 +62,8 @@ a {
     animation: float 30s ease-in-out infinite;
 }
 #astro-2 {
-    top: 50%;
-    left: 5vw;
+    top: 74%;
+    left: 45vw;
     animation: float-reverse 25s ease-in-out infinite;
 }
 /* THE CONTAINER */

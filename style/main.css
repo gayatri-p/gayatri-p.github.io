@@ -17,7 +17,14 @@
 }
 
 .loaded .loader-container {
-  display: none;
+  -webkit-transform: scale(8);
+          transform: scale(8);
+  opacity: 0;
+  -webkit-transition: opacity .3s ease, -webkit-transform .3s ease-in;
+  transition: opacity .3s ease, -webkit-transform .3s ease-in;
+  transition: transform .3s ease-in, opacity .3s ease;
+  transition: transform .3s ease-in, opacity .3s ease, -webkit-transform .3s ease-in;
+  pointer-events: none;
 }
 
 .text {
@@ -84,8 +91,8 @@ a {
 }
 
 #astro-2 {
-  top: 50%;
-  left: 5vw;
+  top: 74%;
+  left: 45vw;
   -webkit-animation: float-reverse 25s ease-in-out infinite;
           animation: float-reverse 25s ease-in-out infinite;
 }
