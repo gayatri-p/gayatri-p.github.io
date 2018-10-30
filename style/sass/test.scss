@@ -311,6 +311,17 @@ polygon {
 
 }
 
+@media (max-width: 424px) {
+    .popup.active {
+        .popup-content {
+            transform: scale(.7)
+        }
+        #close {
+            transform: scale(.7)
+        }
+    }
+}
+
 /* DESKTOP VIEW */
 @media (min-width: 800px) {
     #brain-container svg {

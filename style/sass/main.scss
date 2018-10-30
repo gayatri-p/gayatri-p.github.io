@@ -96,6 +96,81 @@ a {
     width: 90%;
     z-index: 3;
     object-fit: none;
+    height: 298px;
+    margin-bottom: -130px;
+}
+.row__name p {
+    color: #00E5C7;
+    font-size: 3rem;
+    font-family: 'Gaegu', sans-serif;
+    margin-bottom: -130px;
+}
+.row__name svg {
+    width: 100%;
+    transform: rotate(-10deg)
+}
+#path1,
+#path2 {
+    stroke-dasharray: 247 500;
+    stroke-dashoffset: 247;
+}
+
+#path3 {
+    stroke-dasharray: 287 800;
+    stroke-dashoffset: 287;
+}
+
+#path4 {
+    stroke-dasharray: 156 800;
+    stroke-dashoffset: 156;
+}
+
+#path5 {
+    stroke-dasharray: 156 800;
+    stroke-dashoffset: 156;
+}
+
+#path6 {
+    stroke-dasharray: 258 800;
+    stroke-dashoffset: 258;
+}
+
+#path7 {
+    stroke-dasharray: 10 800;
+    stroke-dashoffset: 10;
+}
+
+#path8 {
+    stroke-dasharray: 145 800;
+    stroke-dashoffset: 145;
+}
+
+#path9 {
+    stroke-dasharray: 34 800;
+    stroke-dashoffset: 34;
+}
+
+#path10 {
+    stroke-dasharray: 105 800;
+    stroke-dashoffset: 105;
+}
+
+mask path {
+    transition: 1.5s linear;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 10.87437534;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+    stroke-opacity: 1
+}
+
+mask path.show {
+    stroke-dashoffset: 0 !important
+}
+#letters path {
+    fill: #00E5C7;
 }
 /* MY IMAGE */
 .row__image {
@@ -134,6 +209,26 @@ a {
     fill: #eee;
 }
 /* DESKTOP VERSION */
+@media (max-width: 800px) and (min-width: 360px) {
+    .row__name {
+        margin-bottom: -50px;
+        padding-left: 30px;
+        p {
+            margin-bottom: -100px;
+        }
+    }
+}
+@media (max-width: 800px) and (min-width: 600px) {
+    .row__name {
+        margin-bottom: -100px;
+        p {
+            margin-bottom: -100px;
+        }
+        svg {
+            width: 70%
+        }
+    }
+}
 @media (min-width: 800px) {
     .container {
         overflow: hidden;
@@ -145,6 +240,10 @@ a {
     .row__name {
         width: 520px;
         height: 298px;
+        margin-bottom: -50px;
+        p {
+            margin-bottom: -100px;
+        }
     }
     .content {
         margin-left: 0;

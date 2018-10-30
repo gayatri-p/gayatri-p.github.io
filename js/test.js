@@ -1,6 +1,6 @@
 // JQCLOUD WORD CUSTOMIZATION
 var words = [
-    {text: "Physics ⚛", weight: 10},
+    { text: "Physics ⚛", weight: 10 },
     {
         text: "Coding 💻", weight: 9,
         handlers: {
@@ -9,13 +9,13 @@ var words = [
         html: { class: 'linked' }
     },
     { text: "Music 🎹", weight: 8.5 },
-    { text: "Kerala 🌴", weight: 8.5, link: 'https://en.wikipedia.org/wiki/Kerala', html: {class: 'linked'} },
+    { text: "Kerala 🌴", weight: 8.5, link: 'https://en.wikipedia.org/wiki/Kerala', html: { class: 'linked' } },
     { text: "Astronomy 🔭", weight: 8 },
     { text: "Web dev 🕸", weight: 7.9 },
     { text: "Star Watching 🌌", weight: 7.1 },
     { text: "Cycling 🚴", weight: 7.1 },
     { text: "Reading 🤓", weight: 7 },
-    { text: "Bazinga 💥", weight: 6.4, link: 'https://twitter.com/bigbangtheory', html: {class: 'linked'} },
+    { text: "Bazinga 💥", weight: 6.4, link: 'https://twitter.com/bigbangtheory', html: { class: 'linked' } },
     { text: "Sleep 💤", weight: 6.4 },
     { text: "Mollywood 😘", weight: 6.3 },
 ]
@@ -36,28 +36,32 @@ const values = {
     js: 35
 }
 
-let arrow = anime.timeline() 
-
 const fallDown = _ => {
     for (const lang of Object.keys(values)) {
         let skill = anime.timeline()
+        let arrow = anime.timeline()
         let perc = values[lang]
         let val = (perc / 100) * 280
         let dur = perc < 40 ? perc * 50 : perc * 25
         let delay = perc < 40 ? 200 : 0
+        
+        // ANIME THE BAR
         skill
             .add({
                 targets: `.skill-${lang} .skill-path`,
+                easing: [0.55, 0.085, 0.68, 0.53],
+                duration: dur,
+                delay: delay,
                 d: [
                     { value: `M 10 10 L 10 10 L 290 10` },
                     { value: `M 10 10 L ${val} 45 L 290 10` }
-                ],
-                easing: [0.55, 0.085, 0.68, 0.53],
-                duration: dur,
-                delay: delay
+                ]
             })
             .add({
                 targets: `.skill-${lang} .skill-path`,
+                easing: [0, 0, .58, 1],
+                duration: dur + 200,
+                delay: delay,
                 d: [
                     { value: `M 10 10 L ${val} 50 L 290 10` },
                     { value: `M 10 10 L ${val} 40 L 290 10` },
@@ -66,39 +70,43 @@ const fallDown = _ => {
                     { value: `M 10 10 L ${val} 53 L 290 10` },
                     { value: `M 10 10 L ${val} 51 L 290 10` },
                     { value: `M 10 10 L ${val} 50 L 290 10` }
-                ],
-                easing: [0, 0, .58, 1],
-                duration: dur + 200,
-                delay: delay
+                ]
             })
+        // ANIME THE LABEL
+        arrow
+            .add({
+                targets: `.skill-${lang} .arrow`,
+                duration: dur,
+                delay: delay,
+                easing: [0.55, 0.085, 0.68, 0.53],
+                left: [
+                    { value: '10px' },
+                    { value: `${val}px` }
+                ],
+                top: [
+                    { value: '10px' },
+                    { value: '50px' }
+                ],
+            })
+            .add({
+                targets: `.skill-${lang} .arrow`,
+                duration: dur + 200,
+                easing: [0, 0, .58, 1],
+                delay: delay,
+                top: [
+                    { value: '+=0px' },
+                    { value: '+=-10px' },
+                    { value: '+=10px' },
+                    { value: '+=-7px' },
+                    { value: '+=3px' },
+                    { value: '+=1px' },
+                    { value: '+=0px' },
+                ]
+            })
+
     }
 }
 // fallDown()
-
-
-arrow
-    .add({
-        targets: '.arrow',
-        duration: 1600,
-        left: '224px',
-        top: '50px',
-        easing: [0.55, 0.085, 0.68, 0.53],
-        delay: 800
-    })
-    /*.add ({
-        targets: '.arrow',
-        duration: 2200,
-        easing: [0, 0, .58, 1],
-        transform: [
-            {value: 'translateY(0px) rotate(0deg)'},
-            {value: 'translateY(-10px) rotate(150deg)'},
-            {value: 'translateY(10px) rotate(20deg)'},
-            {value: 'translateY(-7px) rotate(165deg)'},
-            {value: 'translateY(3px) rotate(170deg)'},
-            {value: 'translateY(1px) rotate(175deg)'},
-            {value: 'translateY(0px) rotate(179deg)'}
-        ]
-    })*/
 
 const btnClose = document.querySelector('#close')
 const popup = document.querySelector('.popup')

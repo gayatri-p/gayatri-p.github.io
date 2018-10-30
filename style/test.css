@@ -486,6 +486,17 @@ polygon {
   transition: opacity 0.6s 0.4s, transform 0.6s 0.4s, -webkit-transform 0.6s 0.4s;
 }
 
+@media (max-width: 424px) {
+  .popup.active .popup-content {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  .popup.active #close {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
 /* DESKTOP VIEW */
 @media (min-width: 800px) {
   #brain-container svg {
