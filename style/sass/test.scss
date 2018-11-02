@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Ribeye|Suez+One|Space+Mono:700');
+@import url('https://fonts.googleapis.com/css?family=Ribeye|Suez+One|Space+Mono:700');
 
 * {
     margin: 0;
@@ -11,9 +11,11 @@ $tr-later: opacity .6s .4s, transform .6s .4s;
 $auto: url(../images/spaceship.png), auto;
 $pointer: url(../images/pointer.png), pointer;
 
-$fSecular: 'Suez One', sans-serif;
+$serif: 'Suez One', serif;
+$serif: 'Ribeye', serif;
+$mono: 'Space Mono', sans-serif;
 
-.jqcloud{font-size:10px;line-height:normal;overflow:hidden;position:relative}.jqcloud-word.w1{color:#aab5f0;font-size:100%}.jqcloud-word.w2{color:#9ce;font-size:150%}.jqcloud-word.w3{color:#a0ddff;font-size:200%}.jqcloud-word.w4{color:#90c5f0;font-size:250%}.jqcloud-word.w5{color:#90a0dd;font-size:300%}.jqcloud-word.w6{color:#90c5f0;font-size:350%}.jqcloud-word.w7{color:#39d;font-size:400%}.jqcloud-word.w8{color:#0cf;font-size:450%}.jqcloud-word.w9{color:#0cf;font-size:500%}.jqcloud-word.w10{color:#0cf;font-size:550%}.jqcloud-word a:hover{color:#0cf}
+.jqcloud{font-size:7px;line-height:normal;overflow:hidden;position:relative}.jqcloud-word.w1{color:#aab5f0;font-size:160%}.jqcloud-word.w2{color:#9ce;font-size:150%}.jqcloud-word.w3{color:#a0ddff;font-size:200%}.jqcloud-word.w4{color:#90c5f0;font-size:250%}.jqcloud-word.w5{color:#90a0dd;font-size:300%}.jqcloud-word.w6{color:#90c5f0;font-size:350%}.jqcloud-word.w7{color:#39d;font-size:400%}.jqcloud-word.w8{color:#0cf;font-size:450%}.jqcloud-word.w9{color:#0cf;font-size:500%}.jqcloud-word.w10{color:#0cf;font-size:550%}.jqcloud-word a:hover{color:#0cf}
 
 body {
     background: url(../images/canvas.svg), #191919;
@@ -25,7 +27,7 @@ body {
     -ms-user-select: none;
     user-select: none;
     position: relative;
-    font-family: 'Space Mono','Cabin Sketch', sans-serif;
+    font-family: $mono;
 }
 
 a, button{
@@ -69,8 +71,9 @@ a, button{
     pointer-events: none;
     color: #fff;
     animation: fade-in .5s ease-in forwards;
-    animation-delay: 4s;
-    font-family:'Ribeye', sans-serif;
+    animation-delay: 1.3s;
+    font-family: $mono;
+    letter-spacing: -5px;
     cursor: $pointer;
 }
 
@@ -234,14 +237,13 @@ polygon {
     transform: scale(0);
     transition: $tr-before;
     color: #fff;
-    font-family: $fSecular;
+    font-family: $serif;
 
     h1 {
         margin-bottom: 50px;
         text-align: center;
         font-size: 32px;
-        font-family: $fSecular;
-        // letter-spacing: 1px;
+        font-family: $serif;
         font-weight: normal;
     }
 }
@@ -361,5 +363,8 @@ polygon {
     }
     #astro-2 {
         left: 80vw;
+    }
+    .jqcloud {
+        font-size: 11px;
     }
 }

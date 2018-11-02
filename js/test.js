@@ -6,16 +6,16 @@ var words = [
         handlers: {
             click: _ => { openPopup() }
         },
-        html: { class: 'linked' }
+        html: { class: 'linked', title: 'Click Me' }
     },
     { text: "Music🎹", weight: 8.5, html: { class: 'linked image' }  },
-    { text: "Kerala🌴", weight: 8.5, link: 'https://en.wikipedia.org/wiki/Kerala', html: { class: 'linked image' } },
+    { text: "Kerala🌴", weight: 8.5, html: { class: 'linked image' } },
     { text: "Astronomy🔭", weight: 8 },
     { text: "Web dev🕸", weight: 7.9 },
     { text: "Star Watching🌌", weight: 7.1 },
     { text: "Cycling🚴", weight: 7.1, html: { class: 'linked image' } },
     { text: "Reading🤓", weight: 7 },
-    { text: "Bazinga💥", weight: 6.4, link: 'https://twitter.com/bigbangtheory', html: { class: 'linked image' } },
+    { text: "Bazinga💥", weight: 6.4, html: { class: 'linked image' } },
     { text: "Sleep💤", weight: 6.4 },
     { text: "Mollywood😘", weight: 6.3 },
 ]

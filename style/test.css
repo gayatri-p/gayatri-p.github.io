@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Ribeye|Suez+One|Space+Mono:700");
+@import url("https://fonts.googleapis.com/css?family=Ribeye|Suez+One|Space+Mono:700");
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 }
 
 .jqcloud {
-  font-size: 10px;
+  font-size: 7px;
   line-height: normal;
   overflow: hidden;
   position: relative;
@@ -15,7 +15,7 @@
 
 .jqcloud-word.w1 {
   color: #aab5f0;
-  font-size: 100%;
+  font-size: 160%;
 }
 
 .jqcloud-word.w2 {
@@ -77,7 +77,7 @@ body {
   -ms-user-select: none;
   user-select: none;
   position: relative;
-  font-family: 'Space Mono','Cabin Sketch', sans-serif;
+  font-family: "Space Mono", sans-serif;
 }
 
 a, button {
@@ -122,9 +122,10 @@ a, button {
   color: #fff;
   -webkit-animation: fade-in .5s ease-in forwards;
           animation: fade-in .5s ease-in forwards;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-  font-family: 'Ribeye', sans-serif;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+  font-family: "Space Mono", sans-serif;
+  letter-spacing: -5px;
   cursor: url(../images/pointer.png), pointer;
 }
 
@@ -384,14 +385,14 @@ polygon {
   transition: opacity 0.3s 0s, transform 0.3s 0s;
   transition: opacity 0.3s 0s, transform 0.3s 0s, -webkit-transform 0.3s 0s;
   color: #fff;
-  font-family: "Suez One", sans-serif;
+  font-family: "Ribeye", serif;
 }
 
 .popup-content h1 {
   margin-bottom: 50px;
   text-align: center;
   font-size: 32px;
-  font-family: "Suez One", sans-serif;
+  font-family: "Ribeye", serif;
   font-weight: normal;
 }
 
@@ -541,5 +542,8 @@ polygon {
   }
   #astro-2 {
     left: 80vw;
+  }
+  .jqcloud {
+    font-size: 11px;
   }
 }
