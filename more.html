@@ -19,9 +19,6 @@
     <!-- TITLE -->
     <title>Dissection 🔍</title>
 
-    <!-- JQCLOUD -->
-    <script src="js/jquery.js"></script>
-
     <!-- CSS -->
     <link rel="stylesheet" href="style/more.min.css">
 </head>
@@ -40,10 +37,32 @@
                   ░ ░                                    
 You seem pretty curious 👽
 -->
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="big-nav">
+            <a href="/">Home</a>
+            <a href="#">Explore me</a>
+        </div>
+        <div class="small-nav">
+            <svg id="nav-open" viewbox="0 0 20 20">
+                <rect class="rect-1" width="20"></rect>
+                <rect class="rect-2" width="20"></rect>
+                <rect class="rect-3" width="20"></rect>
+            </svg>
+            <div class="small-nav-links">
+                <a href="/">Home</a>
+                <a href="#">Explore me</a>
+            </div>
+            <svg id="nav-close" viewbox="0 0 24 24">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+        </div>
+    </nav> 
     <!-- BRAIN -->
     <div id="brain-container">
         <a id="dissect-button">Dissect my Brain</a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="542" height="454" viewBox="0 0 542 454.3" class=""><style>.a{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:10;stroke:#fff;}</style><g id="outline" data-delay="10"><path d="M285.4 13.4c4-1.3 42-16.7 72.7 8 4.7-8.7 62 2 74 12 8 0.7 59.3 26.7 66.7 43.3 6.7 4.7 24.7 8 34.7 67.3 3.6 26.7-2.7 32.7-2.7 32.7s1.3 32.7-47.3 34.7c-8.7 14-23.3 16-58.7 10.7 -4 6.7 1.3 17.3 2 27.3s-6 41.3-44 54c-11.3 10.7-46.7 22-70 12 -9.3 17.3-12.4 43.3-27.1 44 -12.2 8-29.5 86-29.5 86s-20 1.9-43 1.4c-5 0.5 12.6-34.2 4.5-31 -14.2 5.7-30.2 5.1-40.9 1.7 -14 0-43.2 0-47.9-12 -12.7-1.3-27.4-10-32.7-20.7 -14.7-2.7-48.7-21.9-28.7-55.3l-0.7-6.7c0 0-43.3 3.3-44-32.2 -0.2-11.2-26-25.1-10-54.6 0 0-5.3-51.8 12-57.2 0 0-8.7-31.3 20-54.7 0.7-10 13.3-50.7 58.7-56.7 0-7.3 25.3-40.7 65.3-40.7 10.7 2.7 26.7-3.3 26.7-3.3s4.7-21.3 54.7-14L285.4 13.4z" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:15;stroke:#df5286" class="LGKIyuBl_0"></path></g><g id="my-svg" data-delay="500"><path d="M271.7 37.9c23.2-5 54.2-6 50 17.5 -2.8 15.9-6.7 29.7 9 34 24.6 6.7 34 37 22 57s13.3 25.3 13.3 25.3 10.7 33.4 41.7 10.7c5-3.7 12.9 17.6 32.7 17.6 7 0 24-10.6 25.3-28.6 0.9-11.5-6.3-23.3 6-31 5.4-3.4 9-25-5-27" class="a LGKIyuBl_1"></path><path d="M430.2 74c19.5 19 4.7 28 0 30.5 -32 19.7-9.6 46.5-9.6 46.5" class="a LGKIyuBl_2"></path><path d="M412.7 49.9c0 0-22.5 6.5-17 29.5 3 12.7-13.9 8.9-25.5 0 -19.4-14.9-14.5-32.9-14.5-32.9" class="a LGKIyuBl_3"></path><path d="M448.7 69.4c0 0 18 16 19 20s42 17 35 33 9 22 8 28 2 15-9 15" class="a LGKIyuBl_4"></path><path d="M291.7 113.1c-13 10.5-26.1 8.2-29-2.7 -6.3-23.3 27.2-17.7 23.4-33.5 -4.6-19.2-29.1-5.1-34.4-17.5 -8-18.7-33.1-11.6-33.1-11.6S188.9 51.1 194.7 82.4c6.1 32.5 13 29.7 5 41.4" class="a LGKIyuBl_5"></path><path d="M325.4 125.1c0 0 4 26-10 33 -18.8 9.4-19.7-21-46.9-14.7 -22.2 5.2-31.8-3.3-35.8-21 -1.9-8.4-1.5-25.1-0.5-34.1" class="a LGKIyuBl_6"></path><path d="M304.7 209.4c-11-14-28-4-55-5s-3-42-9-30.8 -30 15.1-27.4-26.9c-2-3.3-3.6 11.7-18.6 24.7s-44-2.7-38.7-23.7c1.9-7.4 17.7-21.3 13.1-22.3s-14.6-11-7.5-26c4.9-10.3 3.4-28-8.6-30s-27.3 7-25.3 25 -14.3 23.3-24 25.1c-25.8 4.7-23 45.9-23 45.9" class="a LGKIyuBl_7"></path><path d="M208.1 231.7c0 0 1.8 14.9 14.3 18.3 12.5 3.3 30.3-20.8 46.1-0.9 10 12.5 17.9 12.6 27 9.3 9.1-3.3 19.4-13.2 24.1-9.9" class="a LGKIyuBl_8"></path><path d="M373.4 213.4c0 0-18.2 9.5-18.2 22.5 0 17.3 12.1 24.2 2.6 39.3 -12.8 20.4-38.1 11.7-41.5 11.2" class="a LGKIyuBl_9"></path><path d="M40.1 228.8c12.7 0 10.2 23.1 22.3 16 18.3-10.7 28.7 25.7 31 18 4-13.3 10-28 29.3-37.3s-35.3-2.3-27.7-32.3c4.7-18.2 35.7-27.7 47.7-6.2" class="a LGKIyuBl_10"></path><path d="M95.4 312.7c0 0 42.5-22 69.2-29.8 36.1-10.5 67.6 3.8 75.9 9.2" class="a LGKIyuBl_11"></path><path d="M72.2 215.4c0 0-28.2-6-12.5-31.4 4.2-6.8-10.7-10.7-5.4-28" class="a LGKIyuBl_12"></path><path d="M124.2 275.3c0 0 11.1-27.6 14.2-31.8 18.3-24.7 35.3-6.4 46.5 7.8" class="a LGKIyuBl_13"></path><path d="M126.3 370.8c0 0 8.1-20.4 66.1-40.4" class="a LGKIyuBl_14"></path><path d="M164.6 395.9c0 0 47.5-35.8 72.1-75.8" class="a LGKIyuBl_15"></path><path d="M231.4 392.4c0 0 22-17.7 23.3-44.3 1.3-26.7 19.6-28.3 23.9-30.2" class="a LGKIyuBl_16"></path><path d="M106.2 337.4c0 0 43.5-33 101.9-28.5" class="a LGKIyuBl_17"></path><path d="M361.2 251.1c0 0 15-10.6 25.8-1.6" class="a LGKIyuBl_18"></path></g><style data-made-with="vivus-instant">.LGKIyuBl_0{stroke-dasharray:1626 1628;stroke-dashoffset:1627;animation:LGKIyuBl_draw 1442ms ease 0ms forwards;}.LGKIyuBl_1{stroke-dasharray:408 410;stroke-dashoffset:409;animation:LGKIyuBl_draw 362ms ease 1442ms forwards;}.LGKIyuBl_2{stroke-dasharray:93 95;stroke-dashoffset:94;animation:LGKIyuBl_draw 83ms ease 1804ms forwards;}.LGKIyuBl_3{stroke-dasharray:110 112;stroke-dashoffset:111;animation:LGKIyuBl_draw 98ms ease 1887ms forwards;}.LGKIyuBl_4{stroke-dasharray:131 133;stroke-dashoffset:132;animation:LGKIyuBl_draw 116ms ease 1986ms forwards;}.LGKIyuBl_5{stroke-dasharray:253 255;stroke-dashoffset:254;animation:LGKIyuBl_draw 225ms ease 2103ms forwards;}.LGKIyuBl_6{stroke-dasharray:172 174;stroke-dashoffset:173;animation:LGKIyuBl_draw 153ms ease 2328ms forwards;}.LGKIyuBl_7{stroke-dasharray:478 480;stroke-dashoffset:479;animation:LGKIyuBl_draw 424ms ease 2481ms forwards;}.LGKIyuBl_8{stroke-dasharray:133 135;stroke-dashoffset:134;animation:LGKIyuBl_draw 118ms ease 2906ms forwards;}.LGKIyuBl_9{stroke-dasharray:118 120;stroke-dashoffset:119;animation:LGKIyuBl_draw 105ms ease 3025ms forwards;}.LGKIyuBl_10{stroke-dasharray:237 239;stroke-dashoffset:238;animation:LGKIyuBl_draw 210ms ease 3130ms forwards;}.LGKIyuBl_11{stroke-dasharray:154 156;stroke-dashoffset:155;animation:LGKIyuBl_draw 137ms ease 3341ms forwards;}.LGKIyuBl_12{stroke-dasharray:72 74;stroke-dashoffset:73;animation:LGKIyuBl_draw 64ms ease 3478ms forwards;}.LGKIyuBl_13{stroke-dasharray:94 96;stroke-dashoffset:95;animation:LGKIyuBl_draw 84ms ease 3543ms forwards;}.LGKIyuBl_14{stroke-dasharray:79 81;stroke-dashoffset:80;animation:LGKIyuBl_draw 70ms ease 3627ms forwards;}.LGKIyuBl_15{stroke-dasharray:106 108;stroke-dashoffset:107;animation:LGKIyuBl_draw 94ms ease 3698ms forwards;}.LGKIyuBl_16{stroke-dasharray:94 96;stroke-dashoffset:95;animation:LGKIyuBl_draw 84ms ease 3793ms forwards;}.LGKIyuBl_17{stroke-dasharray:108 110;stroke-dashoffset:109;animation:LGKIyuBl_draw 96ms ease 3877ms forwards;}.LGKIyuBl_18{stroke-dasharray:28 30;stroke-dashoffset:29;animation:LGKIyuBl_draw 25ms ease 3974ms forwards;}@keyframes LGKIyuBl_draw{100%{stroke-dashoffset:0;}}@keyframes LGKIyuBl_fade{0%{stroke-opacity:1;}95.1219512195122%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 542 454.3" class=""><style>.a{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:10;stroke:#fff;}</style><g id="outline" data-delay="10"><path d="M285.4 13.4c4-1.3 42-16.7 72.7 8 4.7-8.7 62 2 74 12 8 0.7 59.3 26.7 66.7 43.3 6.7 4.7 24.7 8 34.7 67.3 3.6 26.7-2.7 32.7-2.7 32.7s1.3 32.7-47.3 34.7c-8.7 14-23.3 16-58.7 10.7 -4 6.7 1.3 17.3 2 27.3s-6 41.3-44 54c-11.3 10.7-46.7 22-70 12 -9.3 17.3-12.4 43.3-27.1 44 -12.2 8-29.5 86-29.5 86s-20 1.9-43 1.4c-5 0.5 12.6-34.2 4.5-31 -14.2 5.7-30.2 5.1-40.9 1.7 -14 0-43.2 0-47.9-12 -12.7-1.3-27.4-10-32.7-20.7 -14.7-2.7-48.7-21.9-28.7-55.3l-0.7-6.7c0 0-43.3 3.3-44-32.2 -0.2-11.2-26-25.1-10-54.6 0 0-5.3-51.8 12-57.2 0 0-8.7-31.3 20-54.7 0.7-10 13.3-50.7 58.7-56.7 0-7.3 25.3-40.7 65.3-40.7 10.7 2.7 26.7-3.3 26.7-3.3s4.7-21.3 54.7-14L285.4 13.4z" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:15;stroke:#df5286" class="LGKIyuBl_0"></path></g><g id="my-svg" data-delay="500"><path d="M271.7 37.9c23.2-5 54.2-6 50 17.5 -2.8 15.9-6.7 29.7 9 34 24.6 6.7 34 37 22 57s13.3 25.3 13.3 25.3 10.7 33.4 41.7 10.7c5-3.7 12.9 17.6 32.7 17.6 7 0 24-10.6 25.3-28.6 0.9-11.5-6.3-23.3 6-31 5.4-3.4 9-25-5-27" class="a LGKIyuBl_1"></path><path d="M430.2 74c19.5 19 4.7 28 0 30.5 -32 19.7-9.6 46.5-9.6 46.5" class="a LGKIyuBl_2"></path><path d="M412.7 49.9c0 0-22.5 6.5-17 29.5 3 12.7-13.9 8.9-25.5 0 -19.4-14.9-14.5-32.9-14.5-32.9" class="a LGKIyuBl_3"></path><path d="M448.7 69.4c0 0 18 16 19 20s42 17 35 33 9 22 8 28 2 15-9 15" class="a LGKIyuBl_4"></path><path d="M291.7 113.1c-13 10.5-26.1 8.2-29-2.7 -6.3-23.3 27.2-17.7 23.4-33.5 -4.6-19.2-29.1-5.1-34.4-17.5 -8-18.7-33.1-11.6-33.1-11.6S188.9 51.1 194.7 82.4c6.1 32.5 13 29.7 5 41.4" class="a LGKIyuBl_5"></path><path d="M325.4 125.1c0 0 4 26-10 33 -18.8 9.4-19.7-21-46.9-14.7 -22.2 5.2-31.8-3.3-35.8-21 -1.9-8.4-1.5-25.1-0.5-34.1" class="a LGKIyuBl_6"></path><path d="M304.7 209.4c-11-14-28-4-55-5s-3-42-9-30.8 -30 15.1-27.4-26.9c-2-3.3-3.6 11.7-18.6 24.7s-44-2.7-38.7-23.7c1.9-7.4 17.7-21.3 13.1-22.3s-14.6-11-7.5-26c4.9-10.3 3.4-28-8.6-30s-27.3 7-25.3 25 -14.3 23.3-24 25.1c-25.8 4.7-23 45.9-23 45.9" class="a LGKIyuBl_7"></path><path d="M208.1 231.7c0 0 1.8 14.9 14.3 18.3 12.5 3.3 30.3-20.8 46.1-0.9 10 12.5 17.9 12.6 27 9.3 9.1-3.3 19.4-13.2 24.1-9.9" class="a LGKIyuBl_8"></path><path d="M373.4 213.4c0 0-18.2 9.5-18.2 22.5 0 17.3 12.1 24.2 2.6 39.3 -12.8 20.4-38.1 11.7-41.5 11.2" class="a LGKIyuBl_9"></path><path d="M40.1 228.8c12.7 0 10.2 23.1 22.3 16 18.3-10.7 28.7 25.7 31 18 4-13.3 10-28 29.3-37.3s-35.3-2.3-27.7-32.3c4.7-18.2 35.7-27.7 47.7-6.2" class="a LGKIyuBl_10"></path><path d="M95.4 312.7c0 0 42.5-22 69.2-29.8 36.1-10.5 67.6 3.8 75.9 9.2" class="a LGKIyuBl_11"></path><path d="M72.2 215.4c0 0-28.2-6-12.5-31.4 4.2-6.8-10.7-10.7-5.4-28" class="a LGKIyuBl_12"></path><path d="M124.2 275.3c0 0 11.1-27.6 14.2-31.8 18.3-24.7 35.3-6.4 46.5 7.8" class="a LGKIyuBl_13"></path><path d="M126.3 370.8c0 0 8.1-20.4 66.1-40.4" class="a LGKIyuBl_14"></path><path d="M164.6 395.9c0 0 47.5-35.8 72.1-75.8" class="a LGKIyuBl_15"></path><path d="M231.4 392.4c0 0 22-17.7 23.3-44.3 1.3-26.7 19.6-28.3 23.9-30.2" class="a LGKIyuBl_16"></path><path d="M106.2 337.4c0 0 43.5-33 101.9-28.5" class="a LGKIyuBl_17"></path><path d="M361.2 251.1c0 0 15-10.6 25.8-1.6" class="a LGKIyuBl_18"></path></g><style data-made-with="vivus-instant">.LGKIyuBl_0{stroke-dasharray:1626 1628;stroke-dashoffset:1627;animation:LGKIyuBl_draw 1442ms ease 0ms forwards;}.LGKIyuBl_1{stroke-dasharray:408 410;stroke-dashoffset:409;animation:LGKIyuBl_draw 362ms ease 1442ms forwards;}.LGKIyuBl_2{stroke-dasharray:93 95;stroke-dashoffset:94;animation:LGKIyuBl_draw 83ms ease 1804ms forwards;}.LGKIyuBl_3{stroke-dasharray:110 112;stroke-dashoffset:111;animation:LGKIyuBl_draw 98ms ease 1887ms forwards;}.LGKIyuBl_4{stroke-dasharray:131 133;stroke-dashoffset:132;animation:LGKIyuBl_draw 116ms ease 1986ms forwards;}.LGKIyuBl_5{stroke-dasharray:253 255;stroke-dashoffset:254;animation:LGKIyuBl_draw 225ms ease 2103ms forwards;}.LGKIyuBl_6{stroke-dasharray:172 174;stroke-dashoffset:173;animation:LGKIyuBl_draw 153ms ease 2328ms forwards;}.LGKIyuBl_7{stroke-dasharray:478 480;stroke-dashoffset:479;animation:LGKIyuBl_draw 424ms ease 2481ms forwards;}.LGKIyuBl_8{stroke-dasharray:133 135;stroke-dashoffset:134;animation:LGKIyuBl_draw 118ms ease 2906ms forwards;}.LGKIyuBl_9{stroke-dasharray:118 120;stroke-dashoffset:119;animation:LGKIyuBl_draw 105ms ease 3025ms forwards;}.LGKIyuBl_10{stroke-dasharray:237 239;stroke-dashoffset:238;animation:LGKIyuBl_draw 210ms ease 3130ms forwards;}.LGKIyuBl_11{stroke-dasharray:154 156;stroke-dashoffset:155;animation:LGKIyuBl_draw 137ms ease 3341ms forwards;}.LGKIyuBl_12{stroke-dasharray:72 74;stroke-dashoffset:73;animation:LGKIyuBl_draw 64ms ease 3478ms forwards;}.LGKIyuBl_13{stroke-dasharray:94 96;stroke-dashoffset:95;animation:LGKIyuBl_draw 84ms ease 3543ms forwards;}.LGKIyuBl_14{stroke-dasharray:79 81;stroke-dashoffset:80;animation:LGKIyuBl_draw 70ms ease 3627ms forwards;}.LGKIyuBl_15{stroke-dasharray:106 108;stroke-dashoffset:107;animation:LGKIyuBl_draw 94ms ease 3698ms forwards;}.LGKIyuBl_16{stroke-dasharray:94 96;stroke-dashoffset:95;animation:LGKIyuBl_draw 84ms ease 3793ms forwards;}.LGKIyuBl_17{stroke-dasharray:108 110;stroke-dashoffset:109;animation:LGKIyuBl_draw 96ms ease 3877ms forwards;}.LGKIyuBl_18{stroke-dasharray:28 30;stroke-dashoffset:29;animation:LGKIyuBl_draw 25ms ease 3974ms forwards;}@keyframes LGKIyuBl_draw{100%{stroke-dashoffset:0;}}@keyframes LGKIyuBl_fade{0%{stroke-opacity:1;}95.1219512195122%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg> -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 542 454"><style>.a{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:10;stroke:#fff}</style><path d="M285 13c4-1 42-16 73 8 5-8 62 2 74 12 8 1 59 27 67 44 6 4 24 8 34 67 4 27-2 33-2 33s1 32-48 34c-8 14-23 16-58 11-4 7 1 17 2 27s-6 42-44 54c-12 11-47 22-70 12-10 18-13 44-27 44-13 8-30 86-30 86s-20 2-43 2c-5 0 13-34 5-31-15 5-31 5-41 1-14 0-43 0-48-12-13-1-28-10-33-20-15-3-49-22-29-56v-6s-44 3-44-32c0-12-26-26-10-55 0 0-6-52 12-57 0 0-9-32 20-55 0-10 13-51 58-57 0-7 26-40 66-40 10 2 26-4 26-4s5-21 55-14l35 4z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="15" stroke="#df5286" stroke-dasharray="1625 1627" stroke-dashoffset="1626" id="outline" data-delay="10" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><g id="my-svg" data-delay="500"><path d="M272 38c23-5 54-6 50 17-3 16-7 30 9 34 24 7 34 37 22 57s13 26 13 26 11 33 42 10c5-3 13 18 32 18 7 0 24-11 26-29 1-11-7-23 6-31 5-3 9-25-5-27" class="a" stroke-dasharray="408 410" stroke-dashoffset="409" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M430 74c20 19 5 28 0 31-32 19-9 46-9 46" class="a" stroke-dasharray="94 96" stroke-dashoffset="95" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M413 50s-23 6-17 29c3 13-14 9-26 0-19-14-14-32-14-32" class="a" stroke-dasharray="110 112" stroke-dashoffset="111" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M449 69s18 16 19 20 42 17 35 33 9 22 8 28 2 15-9 15" class="a" stroke-dasharray="131 133" stroke-dashoffset="132" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M292 113c-13 11-26 8-29-3-7-23 27-17 23-33-5-19-29-5-34-18-8-18-33-11-33-11s-30 3-24 34c6 33 13 30 5 42" class="a" stroke-dasharray="253 255" stroke-dashoffset="254" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M325 125s4 26-10 33c-18 9-19-21-47-15-22 6-31-3-35-21-2-8-2-25-1-34" class="a" stroke-dasharray="172 174" stroke-dashoffset="173" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M305 209c-11-14-28-4-55-5s-3-42-9-30-30 15-28-27c-2-4-3 11-18 24s-44-2-39-23c2-8 18-22 13-23s-15-11-7-26c4-10 3-28-9-30s-27 7-25 25-15 24-24 25c-26 5-23 46-23 46" class="a" stroke-dasharray="478 480" stroke-dashoffset="479" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M208 232s2 15 14 18c13 3 31-21 47-1 10 13 17 13 27 9 9-3 19-13 24-10" class="a" stroke-dasharray="134 136" stroke-dashoffset="135" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M373 213s-18 10-18 23c0 17 12 24 3 39-13 21-38 12-42 11" class="a" stroke-dasharray="119 121" stroke-dashoffset="120" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M40 229c13 0 10 23 22 16 19-11 29 26 31 18 4-13 10-28 30-37s-36-3-28-33c5-18 36-28 48-6" class="a" stroke-dasharray="239 241" stroke-dashoffset="240" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M95 313s43-22 70-30c36-11 67 4 76 9" class="a" stroke-dasharray="155 157" stroke-dashoffset="156" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M72 215s-28-6-12-31c4-7-11-11-6-28" class="a" stroke-dasharray="72 74" stroke-dashoffset="73" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M124 275s11-27 14-31c19-25 36-7 47 7" class="a" stroke-dasharray="93 95" stroke-dashoffset="94" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M126 371s8-21 66-41" class="a" stroke-dasharray="80 82" stroke-dashoffset="81" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M165 396s47-36 72-76" class="a" stroke-dasharray="106 108" stroke-dashoffset="107" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M231 392s22-17 24-44c1-27 19-28 24-30" class="a" stroke-dasharray="94 96" stroke-dashoffset="95" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M106 337s44-33 102-28" class="a" stroke-dasharray="108 110" stroke-dashoffset="109" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/><path d="M361 251s15-11 26-2" class="a" stroke-dasharray="29 31" stroke-dashoffset="30" style="animation:VCPTTgcI_draw 1300ms ease-out 0ms forwards"/></g><style data-made-with="vivus-instant">@keyframes VCPTTgcI_draw{to{stroke-dashoffset:0}}@keyframes VCPTTgcI_fade{0%,92.72727272727273%{stroke-opacity:1}to{stroke-opacity:0}}</style></svg>
     </div>
     <!-- CLOUD -->
     <div id="cloud"></div>
@@ -56,77 +75,63 @@ You seem pretty curious 👽
             <img src="images/floater2.png" alt=".">
         </div>
     </div>
-    <!-- POPUP -->
-    <div class="popup">
-        <div class="boom-screen">
-            <div class="popup-close" onclick="closePopup()">&#10008;</div>
-            <div class="popup-content">
-                <div class="popup-head">
-                    <p class="popup-heading">My Coding Skills</p>
-                    <p class="popup-subheading"><a href="http://repl.it/@gaya3p" target="_blank">See my code</a></p>
+    <!-- THE POPUP -->
+    <section class="popup" style="background: #22292900">
+        <button id="close"></button>
+        <div class="popup-content">
+            <h1>My Coding Skills</h1>
+    
+            <div class="skill skill-html">
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar">
+                    <label class="arrow">80%</label>
+                    <svg height="100" class="skill-svg">
+                        <path d="M 10 10 L 10 10 L 290 10" class="skill-path"></path>
+                    </svg>
                 </div>
-                <section id="skills">
-                    <!-- SKILL 1 -->
-                    <div class="skill skill-html">
-                        <div class="skill-info">
-                            HTML
-                        </div>
-                        <div class="skill-bar">
-                            <svg height="100">
-                                <path class="skill-path"></path>
-                            </svg>
-                            <div class="arrow">
-                                <span>80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- SKILL 2 -->
-                    <div class="skill skill-css">
-                        <div class="skill-info">
-                            CSS
-                        </div>
-                        <div class="skill-bar">
-                            <svg height="100">
-                                <path class="skill-path"></path>
-                            </svg>
-                            <div class="arrow">
-                                <span>67%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- SKILL 3 -->
-                    <div class="skill skill-py">
-                        <div class="skill-info">
-                            PYTHON
-                        </div>
-                        <div class="skill-bar">
-                            <svg height="100">
-                                <path class="skill-path"></path>
-                            </svg>
-                            <div class="arrow">
-                                <span>25%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- SKILL 4 -->
-                    <div class="skill skill-js">
-                        <div class="skill-info">
-                            JS
-                        </div>
-                        <div class="skill-bar">
-                            <svg height="100">
-                                <path class="skill-path"></path>
-                            </svg>
-                            <div class="arrow">
-                                <span>35%</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </div>
+    
+            <div class="skill skill-css">
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar">
+                    <label class="arrow">70%</label>
+                    <svg height="100" class="skill-svg">
+                        <path d="M 10 10 L 10 10 L 290 10" class="skill-path"></path>
+                    </svg>
+                </div>
+            </div>
+    
+            <div class="skill skill-py">
+                <div class="skill-name">Python</div>
+                <div class="skill-bar">
+                    <label class="arrow">25%</label>
+                    <svg height="100" class="skill-svg">
+                        <path d="M 10 10 L 10 10 L 290 10" class="skill-path"></path>
+                    </svg>
+                </div>
+            </div>
+    
+            <div class="skill skill-js">
+                <div class="skill-name">Javascript</div>
+                <div class="skill-bar">
+                    <label class="arrow">35%</label>
+                    <svg height="100" class="skill-svg">
+                        <path d="M 10 10 L 10 10 L 290 10" class="skill-path"></path>
+                    </svg>
+                </div>
+            </div>
+    
         </div>
-    </div>
+    </section>
+    <!-- POPUP BACKGROUND -->
+    <svg class="background-svg" viewBox="0 0 200 100" preserveAspectRatio="none">
+        <polygon class="popup-background" points="100,50 100,50 100,50 100,50"></polygon>
+    </svg>
+
+    <script src="js/anime.js"></script>
+    <script src="js/cloud.js"></script>
     <script src="js/more.js"></script>
+
 </body>
 
 </html>

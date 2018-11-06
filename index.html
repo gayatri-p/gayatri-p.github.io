@@ -49,6 +49,27 @@
                   ░ ░                                    
 You seem pretty curious 👽
 -->
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="big-nav">
+            <a href="#">Home</a>
+            <a href="/more">Explore me</a>
+        </div>
+        <div class="small-nav">
+            <svg id="nav-open" viewbox="0 0 20 20">
+                <rect class="rect-1" width="20"></rect>
+                <rect class="rect-2" width="20"></rect>
+                <rect class="rect-3" width="20"></rect>
+            </svg>
+            <div class="small-nav-links">
+                <a href="#">Home</a>
+                <a href="/more">Explore me</a>
+            </div>
+            <svg id="nav-close" viewbox="0 0 24 24">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+        </div>
+    </nav> 
     <div class="astronauts">
         <div class="astronaut" id="astro-1">
             <img src="images/floater1.png" alt=".">
@@ -75,7 +96,6 @@ You seem pretty curious 👽
                     <a title="So, I'm both dead and alive at the same time.">Love Physics 🔭.</a><br>
                     <a title="I made this website.">Amateur coder 💻.</a><br>
                     <a title="wtf is G minor?">Terrible pianist 🎹.</a><br>
-                    <a href="/test" title="Know more about me." id="typing">Explore Me 🔍</a>
                 </span>
             </div>
             <div class="row row__social">
@@ -110,7 +130,7 @@ You seem pretty curious 👽
     <script>
         window.onload = function () {
             document.getElementById('body').classList.add('loaded');
-            type()
+            // type()
             handwriting()
         }
         const type = _ => {
@@ -135,17 +155,28 @@ You seem pretty curious 👽
             }, time - 1000)
         }
         const handwriting = _ => {
-            write('path2', 1000)
-            write('path1', 1000)
-            write('path5', 3000)
-            write('path4', 3200)
-            write('path3', 3800)
-            write('path7', 5500)
-            write('path8', 5600)
-            write('path6', 6000)
-            write('path9', 7400)
-            write('path10', 7600)
+            write('path2', 500) // G
+            write('path1', 500) // 1st A
+            write('path5', 1500) // 1st A BAR
+            write('path4', 1600) // Y
+            write('path3', 1900) // 2nd A
+            write('path7', 2750) // 2nd A BAR
+            write('path8', 2800) // T
+            write('path6', 3000) // R SUPER
+            write('path9', 3500) // R SUB
+            write('path10', 3800) // I
         }
+        const navOpen = document.getElementById('nav-open')
+        const navClose = document.getElementById('nav-close')
+
+        navOpen.addEventListener('click', _ => {
+            document.querySelector('.small-nav-links').classList.add('show')
+            document.querySelector('.small-nav').classList.add('open')
+        })
+        navClose.addEventListener('click', _ => {
+            document.querySelector('.small-nav-links').classList.remove('show')
+            document.querySelector('.small-nav').classList.remove('open')
+        })
         </script>
 </body>
 
