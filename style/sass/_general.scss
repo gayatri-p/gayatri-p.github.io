@@ -1,7 +1,5 @@
-$auto: url(../images/spaceship.png),
-auto;
-$pointer: url(../images/pointer.png),
-pointer;
+$auto: url(../images/spaceship.png),auto;
+$pointer: url(../images/pointer.png),pointer;
 
 * {
     margin: 0;
@@ -70,8 +68,8 @@ nav {
     display: block;
     position: relative;
 
-    $scaleIn: transform .5s cubic-bezier(0.43, 0.46, 0, 2.07);
-    $scaleOut: transform .5s cubic-bezier(1,-1.07, 0.7, 0.9);
+    $scaleIn: transform .3s cubic-bezier(0.43, 0.46, 0, 2.07);
+    $scaleOut: transform .3s cubic-bezier(1,-1.07, 0.7, 0.9);
 
     &-links {
         background: #393939;
@@ -97,11 +95,13 @@ nav {
         right: 0;
         box-shadow: 0 0 10px #0009;
         transform: scale(0);
+        cursor: $pointer;
         transition: $scaleOut;
     }
     &.open #nav-close {
         transform: scale(1);
         transition: $scaleIn;
+        transition-delay: .1s;
     }
 }
 
@@ -111,6 +111,7 @@ nav {
     right: 0;
     height: 24px;
     width: 24px;
+    cursor: $pointer;
 
     rect {
         height: 2px;
@@ -119,18 +120,36 @@ nav {
 
     .rect-1 {
         transform: translateY(0);
-        transition: .1s ease;
     }
 
     .rect-2 {
         transform: translateY(5px);
-        transition: .1s ease;
     }
 
     .rect-3 {
         transform: translateY(10px);
-        transform-origin: right;
-        transition: .1s ease;
+    }
+
+    &:hover {
+        rect {
+            width: 0%;
+            animation: bars .8s cubic-bezier(0.43, 0.46, 0, 2.07) forwards;
+        }
+        .rect-2 {
+            animation-delay: .1s;
+        }
+        .rect-3 {
+            animation-delay: .2s;
+        }
+    }
+}
+
+@keyframes bars {
+    0% {
+        width: 0%
+    }
+    100% {
+        width: 100%;
     }
 }
 

@@ -86,19 +86,19 @@ nav a:hover::after {
           transform-origin: top right;
   -webkit-transform: translate(-26px, 14px) scale(0);
           transform: translate(-26px, 14px) scale(0);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(1, -1.07, 0.7, 0.9);
-  transition: -webkit-transform 0.5s cubic-bezier(1, -1.07, 0.7, 0.9);
-  transition: transform 0.5s cubic-bezier(1, -1.07, 0.7, 0.9);
-  transition: transform 0.5s cubic-bezier(1, -1.07, 0.7, 0.9), -webkit-transform 0.5s cubic-bezier(1, -1.07, 0.7, 0.9);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
+  transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
+  transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
+  transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9), -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
 }
 
 .small-nav-links.show {
   -webkit-transform: translate(-17px, 14px) scale(1);
           transform: translate(-17px, 14px) scale(1);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.43, 0.46, 0, 2.07);
-  transition: -webkit-transform 0.5s cubic-bezier(0.43, 0.46, 0, 2.07);
-  transition: transform 0.5s cubic-bezier(0.43, 0.46, 0, 2.07);
-  transition: transform 0.5s cubic-bezier(0.43, 0.46, 0, 2.07), -webkit-transform 0.5s cubic-bezier(0.43, 0.46, 0, 2.07);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
+  transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
+  transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
+  transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07), -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
 }
 
 .small-nav #nav-close {
@@ -112,19 +112,22 @@ nav a:hover::after {
           box-shadow: 0 0 10px #0009;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(1, -1.07, 0.7, 0.9);
-  transition: -webkit-transform 0.5s cubic-bezier(1, -1.07, 0.7, 0.9);
-  transition: transform 0.5s cubic-bezier(1, -1.07, 0.7, 0.9);
-  transition: transform 0.5s cubic-bezier(1, -1.07, 0.7, 0.9), -webkit-transform 0.5s cubic-bezier(1, -1.07, 0.7, 0.9);
+  cursor: url(../images/pointer.png), pointer;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
+  transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
+  transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
+  transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9), -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
 }
 
 .small-nav.open #nav-close {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.43, 0.46, 0, 2.07);
-  transition: -webkit-transform 0.5s cubic-bezier(0.43, 0.46, 0, 2.07);
-  transition: transform 0.5s cubic-bezier(0.43, 0.46, 0, 2.07);
-  transition: transform 0.5s cubic-bezier(0.43, 0.46, 0, 2.07), -webkit-transform 0.5s cubic-bezier(0.43, 0.46, 0, 2.07);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
+  transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
+  transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
+  transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07), -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
 }
 
 #nav-open {
@@ -133,6 +136,7 @@ nav a:hover::after {
   right: 0;
   height: 24px;
   width: 24px;
+  cursor: url(../images/pointer.png), pointer;
 }
 
 #nav-open rect {
@@ -143,24 +147,50 @@ nav a:hover::after {
 #nav-open .rect-1 {
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: .1s ease;
-  transition: .1s ease;
 }
 
 #nav-open .rect-2 {
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
-  -webkit-transition: .1s ease;
-  transition: .1s ease;
 }
 
 #nav-open .rect-3 {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: .1s ease;
-  transition: .1s ease;
+}
+
+#nav-open:hover rect {
+  width: 0%;
+  -webkit-animation: bars 0.8s cubic-bezier(0.43, 0.46, 0, 2.07) forwards;
+          animation: bars 0.8s cubic-bezier(0.43, 0.46, 0, 2.07) forwards;
+}
+
+#nav-open:hover .rect-2 {
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+#nav-open:hover .rect-3 {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+@-webkit-keyframes bars {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes bars {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .big-nav {
@@ -283,6 +313,7 @@ nav a:hover::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: serif;
 }
 
 .loaded .loader-container {

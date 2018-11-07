@@ -50,8 +50,12 @@ body {
     animation: fade-in .5s ease-in forwards;
     animation-delay: 1.3s;
     font-family: $mono;
-    letter-spacing: -5px;
     cursor: $pointer;
+    transition: .3s ease;
+
+    &:hover {
+        letter-spacing: -3px;
+    }
 }
 
 @keyframes fade-in {
