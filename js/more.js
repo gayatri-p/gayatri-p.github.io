@@ -11,13 +11,18 @@ var words = [
     { text: "Music🎹", weight: 8.5, html: { class: 'linked image' }  },
     { text: "Kerala🌴", weight: 8.5, html: { class: 'linked image' } },
     { text: "Astronomy🔭", weight: 8 },
-    { text: "Web dev🕸", weight: 7.9 },
-    { text: "Star Watching🌌", weight: 7.1 },
-    { text: "Cycling🚴", weight: 7.1, html: { class: 'linked image' } },
-    { text: "Reading🤓", weight: 7 },
+    { text: "Star Gazing ☄", weight: 7.1 },
+    { text: "Books🤓", weight: 7.5, html: { class: 'linked image' } },
+    { text: 'Star Wars🌌', weight: 7.1, html: { class: 'linked image' } },
+    { text: 'Harry Potter⚡', weight: 7.5, html: { class: 'linked image' } },
+    { text: 'Marvel🦸‍', weight: 6.8, html: { class: 'linked image' } },
     { text: "Bazinga💥", weight: 6.4, html: { class: 'linked image' } },
-    { text: "Sleep💤", weight: 6.4 },
-    { text: "Mollywood😘", weight: 6.3 },
+    
+    
+    // { text: "Web dev🕸", weight: 7.9 },
+    // { text: "Cycling 🚴", weight: 7.1, html: { class: 'linked image' } },
+    // { text: "Sleep💤", weight: 6.4 },
+    // { text: "Mollywood😘", weight: 6.3 },
 ]
 
 // RENDER CLOUD
@@ -30,10 +35,10 @@ const renderCloud = _ => {
 renderCloud() // LET IT RAIN ☁
 
 const values = {
-    html: 80,
-    css: 70,
-    py: 25,
-    js: 35
+    py: 55,
+    html: 95,
+    css: 90,
+    js: 30
 }
 
 const fallDown = _ => {

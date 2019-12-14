@@ -52,8 +52,8 @@ nav a:after {
   height: 0;
   background: #00E5C7;
   z-index: -1;
-  -webkit-transition: height 0.3s cubic-bezier(1, -0.65, 0, 2.07);
-  transition: height 0.3s cubic-bezier(1, -0.65, 0, 2.07);
+  -webkit-transition: height 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49);
+  transition: height 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49);
 }
 
 nav a:hover {
@@ -378,6 +378,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
@@ -487,8 +490,6 @@ mask path.show {
   width: 85%;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  position: relative;
-  top: -50px;
 }
 
 .row__about, .row__social {
@@ -567,10 +568,15 @@ mask path.show {
   .row__name {
     width: 520px;
     height: 298px;
-    margin-bottom: -50px;
   }
   .row__name p {
-    margin-bottom: -100px;
+    margin-bottom: -70px;
+    -webkit-transform: translatey(20px);
+            transform: translatey(20px);
+  }
+  .row__name svg {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   .content {
     margin-left: 0;
@@ -580,7 +586,6 @@ mask path.show {
     font-size: 28px;
   }
   .row__about, .row__social {
-    top: -190px;
     left: 100px;
   }
   .astronaut > img {

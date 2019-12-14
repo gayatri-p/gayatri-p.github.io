@@ -52,8 +52,8 @@ nav a:after {
   height: 0;
   background: #00E5C7;
   z-index: -1;
-  -webkit-transition: height 0.3s cubic-bezier(1, -0.65, 0, 2.07);
-  transition: height 0.3s cubic-bezier(1, -0.65, 0, 2.07);
+  -webkit-transition: height 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49);
+  transition: height 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49);
 }
 
 nav a:hover {
@@ -506,12 +506,26 @@ body {
   background-size: cover;
 }
 
-#cloud_word_7::after {
-  background: url(../images/cycle.jpg);
+#cloud_word_5::after {
+  background: url(../images/book.gif);
+}
+
+#cloud_word_6::after {
+  background: url(../images/granger.gif);
+  background-size: cover;
+}
+
+#cloud_word_8::after {
+  background: url(../images/poe.gif);
   background-size: cover;
 }
 
 #cloud_word_9::after {
+  background: url(../images/marvel.gif);
+  background-size: cover;
+}
+
+#cloud_word_10::after {
   background: url(../images/sheldon.gif);
 }
 

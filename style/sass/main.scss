@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Gaegu');
 
-@import 'general.scss';
+@import '_general.scss';
 
 .loader-container {
     position: fixed;
@@ -55,6 +55,8 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    // align-items: center;
     transform-style: preserve-3d;
 }
 .row>img {
@@ -149,8 +151,6 @@ mask path.show {
 .row__image {
     width: 85%;
     align-self: flex-end;
-    position: relative;
-    top: -50px;
 }
 .row__about, .row__social {
     position: relative;
@@ -217,9 +217,13 @@ mask path.show {
     .row__name {
         width: 520px;
         height: 298px;
-        margin-bottom: -50px;
+        // margin-bottom: -50px;
         p {
-            margin-bottom: -100px;
+            margin-bottom: -70px;
+            transform: translatey(20px);
+        }
+        svg {
+            transform: translateY(20px);
         }
     }
     .content {
@@ -230,7 +234,7 @@ mask path.show {
         font-size: 28px;
     }
     .row__about, .row__social {
-        top: -190px;
+        // top: -190px;
         left: 100px;
     }
     .astronaut > img {

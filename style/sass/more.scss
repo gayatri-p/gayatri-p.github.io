@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Suez+One|Space+Mono:700');
 
-@import 'general.scss';
+@import '_general.scss';
 
 $tr-before: opacity .3s 0s, transform .3s 0s;
 $tr-later: opacity .6s .4s, transform .6s .4s;
@@ -129,13 +129,24 @@ body {
     background: url(../images/kerala.jpg);
     background-size: cover;
 }
-#cloud_word_7::after {
-    background: url(../images/cycle.jpg);
+#cloud_word_5::after {
+    background: url(../images/book.gif); // books
+}
+#cloud_word_6::after {
+    background: url(../images/granger.gif); // potter
+    background-size: cover;
+}
+#cloud_word_8::after {
+    background: url(../images/poe.gif); // star
     background-size: cover;
 }
 #cloud_word_9::after {
-    background: url(../images/sheldon.gif);
+    background: url(../images/marvel.gif); // marvel
+    background-size: cover;
 }
+#cloud_word_10::after {
+    background: url(../images/sheldon.gif);
+}   
 
 // ZERO GRAVITY ANIMATION
 .jqcloud-word:nth-child(odd) {
