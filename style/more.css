@@ -10,11 +10,11 @@ body {
   background: url(../images/canvas.svg), #191919;
   background-size: cover;
   width: 100vw;
-  cursor: url(../images/spaceship.png), auto;
+  cursor: url(../images/kylo2.png), auto;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   overflow: hidden;
   position: relative;
 }
@@ -48,12 +48,14 @@ nav a:after {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 0;
+  height: 100%;
+  width: 0;
   background: #00E5C7;
   z-index: -1;
-  -webkit-transition: height 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49);
-  transition: height 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49);
+  -webkit-transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), -webkit-transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
+  transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), -webkit-transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
+  transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
+  transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49), -webkit-transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
 }
 
 nav a:hover {
@@ -61,7 +63,9 @@ nav a:hover {
 }
 
 nav a:hover::after {
-  height: 100%;
+  width: 100%;
+  -webkit-transform: skew(-5deg);
+          transform: skew(-5deg);
 }
 
 .small-nav {
@@ -142,6 +146,7 @@ nav a:hover::after {
 #nav-open rect {
   height: 2px;
   fill: #999;
+  rx: 1px;
 }
 
 #nav-open .rect-1 {
@@ -150,13 +155,14 @@ nav a:hover::after {
 }
 
 #nav-open .rect-2 {
-  -webkit-transform: translateY(5px);
-          transform: translateY(5px);
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  width: 80%;
 }
 
 #nav-open .rect-3 {
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px);
 }
 
 #nav-open:hover rect {
@@ -447,7 +453,7 @@ body {
 
 .jqcloud-word {
   padding: 10px;
-  cursor: url(../images/spaceship.png), auto;
+  cursor: url(../images/kylo2.png), auto;
   -webkit-animation: float 10s ease infinite;
           animation: float 10s ease infinite;
 }
@@ -475,7 +481,7 @@ body {
 
 .jqcloud-word.image {
   position: relative;
-  cursor: url(../images/spaceship.png), auto;
+  cursor: url(../images/kylo2.png), auto;
 }
 
 .jqcloud-word.image::after {

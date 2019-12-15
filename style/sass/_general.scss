@@ -1,4 +1,4 @@
-$auto: url(../images/spaceship.png),auto;
+$auto: url(../images/kylo2.png),auto;
 $pointer: url(../images/pointer.png),pointer;
 
 * {
@@ -12,9 +12,6 @@ body {
     background-size: cover;
     width: 100vw;
     cursor: $auto;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     overflow: hidden;
     position: relative;
@@ -42,24 +39,28 @@ nav {
         position: relative;
         transition: color .3s cubic-bezier(1, -0.65, 0, 2.07);
 
+        $afterTrans: cubic-bezier(0.37,-0.18, 0.32, 1.49);
+
         &:after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 100%;
-            height: 0;
+            height: 100%;
+            width: 0;
             background: #00E5C7;
             z-index: -1;
-            transition: height .6s cubic-bezier(0.37,-0.18, 0.32, 1.49)
+            transition: width .6s $afterTrans,
+                        transform .3s $afterTrans;
         }
-
+        
         &:hover {
             color: #000;
         }
-
+        
         &:hover::after {
-            height: 100%;
+            width: 100%;
+            transform: skew(-5deg);
         }
     }
 }
@@ -116,6 +117,7 @@ nav {
     rect {
         height: 2px;
         fill: #999;
+        rx: 1px;
     }
 
     .rect-1 {
@@ -123,11 +125,12 @@ nav {
     }
 
     .rect-2 {
-        transform: translateY(5px);
+        transform: translateY(6px);
+        width: 80%;
     }
 
     .rect-3 {
-        transform: translateY(10px);
+        transform: translateY(12px);
     }
 
     &:hover {
