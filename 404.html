@@ -22,8 +22,7 @@
     <link rel="preload" href="images/knock.gif" as="image">
 
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Amatic+SC:700');
-
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -37,7 +36,7 @@
             overflow: hidden;
             background: url(images/canvas.svg), #191919;
             color: #fff;
-            font-family: 'Amatic SC';
+            font-family: 'VT323', sans-serif;
             cursor: url(images/spaceship.png), auto;
             background-size: cover;
             display: flex;
@@ -59,6 +58,25 @@
         .message {
             font-size: 3rem;
             text-align: center
+        }
+
+        .blink {
+            font-size: 2.5rem;
+            margin-left: 5px;
+            background: #f00;
+            color: #f00;
+            animation: blink .4s infinite alternate;
+        }
+
+        .blink::selection {
+            background: #f00;
+            color: #f00;
+        }
+
+        @keyframes blink {
+            0% {opacity: 0;}
+            60% {opacity: 0;}
+            100% {opacity: 1;}
         }
 
         img {
@@ -125,12 +143,11 @@
 ░ ░   ░   ░   ▒   ▒ ▒ ░░    ░   ▒    ░        ░░   ░  ▒ ░
       ░       ░  ░░ ░           ░  ░           ░      ░  
                   ░ ░                                    
-You seem pretty curious 👽
-Wanna grab my sheldon gif?
+👽
 -->
     <div class="text">
         <div class="emoji">:(</div>
-        <div class="message">Uh-oh <span>404</span><br>no one is answering</div>
+        <div class="message">Uh-oh <span>404</span><br>no one is answering<span class="blink">n</span></div>
     </div>
     <img src="images/knock.gif" alt="page not found">
     <a href="/">Try some other door</a>
