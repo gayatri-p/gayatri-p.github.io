@@ -2,15 +2,14 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background: url(../images/canvas.svg), #191919;
   background-size: cover;
   width: 100vw;
-  cursor: url(../images/kylo2.png), auto;
+  cursor: url(../images/cursor.png), auto;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -39,7 +38,6 @@ nav {
 nav a {
   color: #999;
   position: relative;
-  -webkit-transition: color 0.3s cubic-bezier(1, -0.65, 0, 2.07);
   transition: color 0.3s cubic-bezier(1, -0.65, 0, 2.07);
 }
 
@@ -52,7 +50,6 @@ nav a:after {
   width: 0;
   background: #00E5C7;
   z-index: -1;
-  -webkit-transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), -webkit-transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
   transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), -webkit-transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
   transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
   transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49), -webkit-transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
@@ -75,22 +72,17 @@ nav a:hover::after {
 
 .small-nav-links {
   background: #393939;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
   padding: 10px;
   -webkit-transform-origin: top right;
           transform-origin: top right;
   -webkit-transform: translate(-26px, 14px) scale(0);
           transform: translate(-26px, 14px) scale(0);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9), -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
@@ -99,7 +91,6 @@ nav a:hover::after {
 .small-nav-links.show {
   -webkit-transform: translate(-17px, 14px) scale(1);
           transform: translate(-17px, 14px) scale(1);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07), -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
@@ -112,12 +103,10 @@ nav a:hover::after {
   position: absolute;
   top: 0;
   right: 0;
-  -webkit-box-shadow: 0 0 10px #0009;
-          box-shadow: 0 0 10px #0009;
+  box-shadow: 0 0 10px #0009;
   -webkit-transform: scale(0);
           transform: scale(0);
   cursor: url(../images/pointer.png), pointer;
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9), -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
@@ -126,12 +115,10 @@ nav a:hover::after {
 .small-nav.open #nav-close {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07), -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
-  -webkit-transition-delay: .1s;
-          transition-delay: .1s;
+  transition-delay: .1s;
 }
 
 #nav-open {
@@ -376,7 +363,6 @@ body {
   right: 0;
   background: #191919;
   z-index: 2000;
-  -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
 }
 
@@ -407,7 +393,6 @@ body {
           animation-delay: 1.3s;
   font-family: "Space Mono", sans-serif;
   cursor: url(../images/pointer.png), pointer;
-  -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
@@ -453,7 +438,7 @@ body {
 
 .jqcloud-word {
   padding: 10px;
-  cursor: url(../images/kylo2.png), auto;
+  cursor: url(../images/cursor.png), auto;
   -webkit-animation: float 10s ease infinite;
           animation: float 10s ease infinite;
 }
@@ -471,7 +456,6 @@ body {
   height: 15%;
   background: linear-gradient(45deg, #134e5e, #71b280);
   z-index: -1;
-  -webkit-transition: .3s ease-in;
   transition: .3s ease-in;
 }
 
@@ -481,7 +465,7 @@ body {
 
 .jqcloud-word.image {
   position: relative;
-  cursor: url(../images/kylo2.png), auto;
+  cursor: url(../images/cursor.png), auto;
 }
 
 .jqcloud-word.image::after {
@@ -494,7 +478,6 @@ body {
   width: 0;
   height: 0;
   z-index: -1;
-  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
@@ -556,15 +539,12 @@ svg.background-svg {
   height: 100vh;
   width: 100%;
   position: relative;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 polygon {
@@ -582,22 +562,18 @@ polygon {
           transform: translate(-50%, -50%);
   z-index: 3;
   pointer-events: none;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .popup-content {
   opacity: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: opacity 0.3s 0s, -webkit-transform 0.3s 0s;
   transition: opacity 0.3s 0s, -webkit-transform 0.3s 0s;
   transition: opacity 0.3s 0s, transform 0.3s 0s;
   transition: opacity 0.3s 0s, transform 0.3s 0s, -webkit-transform 0.3s 0s;
@@ -614,15 +590,13 @@ polygon {
 }
 
 .skill {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .skill-name {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   text-align: right;
   margin-right: 20px;
 }
@@ -677,7 +651,6 @@ polygon {
   cursor: url(../images/pointer.png), pointer;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: opacity 0.3s 0s, -webkit-transform 0.3s 0s;
   transition: opacity 0.3s 0s, -webkit-transform 0.3s 0s;
   transition: opacity 0.3s 0s, transform 0.3s 0s;
   transition: opacity 0.3s 0s, transform 0.3s 0s, -webkit-transform 0.3s 0s;
@@ -692,7 +665,6 @@ polygon {
   height: 10px;
   width: 140%;
   background: #fff;
-  -webkit-transition: .3s ease-in;
   transition: .3s ease-in;
 }
 
@@ -720,7 +692,6 @@ polygon {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: opacity 0.6s 0.4s, -webkit-transform 0.6s 0.4s;
   transition: opacity 0.6s 0.4s, -webkit-transform 0.6s 0.4s;
   transition: opacity 0.6s 0.4s, transform 0.6s 0.4s;
   transition: opacity 0.6s 0.4s, transform 0.6s 0.4s, -webkit-transform 0.6s 0.4s;
@@ -729,7 +700,6 @@ polygon {
 .popup.active #close {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: opacity 0.6s 0.4s, -webkit-transform 0.6s 0.4s;
   transition: opacity 0.6s 0.4s, -webkit-transform 0.6s 0.4s;
   transition: opacity 0.6s 0.4s, transform 0.6s 0.4s;
   transition: opacity 0.6s 0.4s, transform 0.6s 0.4s, -webkit-transform 0.6s 0.4s;

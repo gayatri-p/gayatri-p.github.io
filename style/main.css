@@ -2,15 +2,14 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background: url(../images/canvas.svg), #191919;
   background-size: cover;
   width: 100vw;
-  cursor: url(../images/kylo2.png), auto;
+  cursor: url(../images/cursor.png), auto;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -39,7 +38,6 @@ nav {
 nav a {
   color: #999;
   position: relative;
-  -webkit-transition: color 0.3s cubic-bezier(1, -0.65, 0, 2.07);
   transition: color 0.3s cubic-bezier(1, -0.65, 0, 2.07);
 }
 
@@ -52,7 +50,6 @@ nav a:after {
   width: 0;
   background: #00E5C7;
   z-index: -1;
-  -webkit-transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), -webkit-transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
   transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), -webkit-transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
   transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
   transition: width 0.6s cubic-bezier(0.37, -0.18, 0.32, 1.49), transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49), -webkit-transform 0.3s cubic-bezier(0.37, -0.18, 0.32, 1.49);
@@ -75,22 +72,17 @@ nav a:hover::after {
 
 .small-nav-links {
   background: #393939;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
   padding: 10px;
   -webkit-transform-origin: top right;
           transform-origin: top right;
   -webkit-transform: translate(-26px, 14px) scale(0);
           transform: translate(-26px, 14px) scale(0);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9), -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
@@ -99,7 +91,6 @@ nav a:hover::after {
 .small-nav-links.show {
   -webkit-transform: translate(-17px, 14px) scale(1);
           transform: translate(-17px, 14px) scale(1);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07), -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
@@ -112,12 +103,10 @@ nav a:hover::after {
   position: absolute;
   top: 0;
   right: 0;
-  -webkit-box-shadow: 0 0 10px #0009;
-          box-shadow: 0 0 10px #0009;
+  box-shadow: 0 0 10px #0009;
   -webkit-transform: scale(0);
           transform: scale(0);
   cursor: url(../images/pointer.png), pointer;
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
   transition: transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9), -webkit-transform 0.3s cubic-bezier(1, -1.07, 0.7, 0.9);
@@ -126,12 +115,10 @@ nav a:hover::after {
 .small-nav.open #nav-close {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
   transition: transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07), -webkit-transform 0.3s cubic-bezier(0.43, 0.46, 0, 2.07);
-  -webkit-transition-delay: .1s;
-          transition-delay: .1s;
+  transition-delay: .1s;
 }
 
 #nav-open {
@@ -310,15 +297,12 @@ nav a:hover::after {
   height: 100%;
   background: #191919;
   z-index: 1000;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   font-family: serif;
 }
 
@@ -326,7 +310,6 @@ nav a:hover::after {
   -webkit-transform: scale(8);
           transform: scale(8);
   opacity: 0;
-  -webkit-transition: opacity .3s ease, -webkit-transform .3s ease-in;
   transition: opacity .3s ease, -webkit-transform .3s ease-in;
   transition: transform .3s ease-in, opacity .3s ease;
   transition: transform .3s ease-in, opacity .3s ease, -webkit-transform .3s ease-in;
@@ -356,19 +339,14 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 /* MAIN CONTENT */
@@ -377,16 +355,12 @@ body {
   max-width: 800px;
   margin-left: 10px;
   position: relative;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
@@ -450,7 +424,6 @@ body {
 }
 
 #path7 {
-  -webkit-transition: .3s linear;
   transition: .3s linear;
   stroke-dasharray: 10 800;
   stroke-dashoffset: 10;
@@ -462,7 +435,6 @@ body {
 }
 
 #path9 {
-  -webkit-transition: .3s linear;
   transition: .3s linear;
   stroke-dasharray: 34 800;
   stroke-dashoffset: 34;
@@ -474,7 +446,6 @@ body {
 }
 
 mask path {
-  -webkit-transition: .5s linear;
   transition: .5s linear;
   fill: none;
   stroke: #fff;
@@ -519,13 +490,13 @@ mask path.show {
 }
 
 .row__about > span > a {
-  cursor: url(../images/kylo2.png), auto;
+  cursor: url(../images/cursor.png), auto;
   background: #98dfd5;
 }
 
 /* SOCIAL ICONS */
 .row__social {
-  margin-top: 10px;
+  margin-top: 13px;
 }
 
 .row__social a {
@@ -534,7 +505,6 @@ mask path.show {
 
 .row__social svg {
   fill: #999;
-  -webkit-transition: fill .3s ease-in-out;
   transition: fill .3s ease-in-out;
 }
 

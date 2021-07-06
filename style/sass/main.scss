@@ -177,7 +177,7 @@ mask path.show {
 }
 /* SOCIAL ICONS */
 .row__social {
-    margin-top: 10px;
+    margin-top: 13px;
 }
 .row__social a {
     margin-right: 8px;
@@ -201,9 +201,6 @@ mask path.show {
         svg {
             transform: translateY(30px) rotate(-10deg);
         }
-    }
-    .row__about {
-
     }
 }
 @media (max-width: 800px) and (min-width: 600px) {

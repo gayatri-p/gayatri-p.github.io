@@ -13,12 +13,10 @@ var words = [
     { text: "Astronomy🔭", weight: 8 },
     { text: "Star Gazing ☄", weight: 7.1 },
     { text: "Books🤓", weight: 7.5, html: { class: 'linked image' } },
-    { text: 'Star Wars🌌', weight: 7.1, html: { class: 'linked image' } },
+    { text: 'Cinema', weight: 7.1, html: { class: 'linked image' } },
     { text: 'Harry Potter⚡', weight: 7.5, html: { class: 'linked image' } },
     { text: 'Marvel🦸‍', weight: 6.8, html: { class: 'linked image' } },
-    { text: "Bazinga💥", weight: 6.4, html: { class: 'linked image' } },
-    
-    
+    // { text: "Bazinga💥", weight: 6.4, html: { class: 'linked image' } },
     // { text: "Web dev🕸", weight: 7.9 },
     // { text: "Cycling 🚴", weight: 7.1, html: { class: 'linked image' } },
     // { text: "Sleep💤", weight: 6.4 },
@@ -35,7 +33,7 @@ const renderCloud = _ => {
 renderCloud() // LET IT RAIN ☁
 
 const values = {
-    py: 55,
+    py: 70,
     html: 95,
     css: 90,
     js: 30
